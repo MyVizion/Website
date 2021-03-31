@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8vw;
+}
+
+header{
+    background-color: ghostwhite;
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+}
+
+.title{
+    position: absolute;
+    left: 5vw;
+    top: 4vh;
+    font-size: 1.5vw;
+}
+
+.List{ /* for the navigation menu */
+    position: relative;
+    display: inline-block;
+    top: 6vh;
+    right: 12vw;
+    margin-right: 1vw;
+}
+
+.LoginButton{ /* for both login and join button */
+    position: relative;
+    height: 3vh;
+    width: 4vw;
+    text-align: center;
+    border-radius: 0.2vw;
+    left: 32vw;
+    top: 3vh;
+}
+
+.Login{ /* for the login button */
+    border: solid gray 0.1vw;
+}
+.Join{ /* for the join button */
+    background-color: lawngreen;
+    border: none;
+}
+
+.profileButton{ /* for the profile button */
+    position: absolute;
+    border: solid gray 0.1vw;
+    border-radius: 50%;
+    height: 2vw;
+    width: 2vw;
+    top: 4.2vh;
+    right: 10vw;
+}
+
+.notlificationButton{ /* for the notlification button */
+    position: absolute;
+    border: none;
+    height: 4vh;
+    width: 4vh;
+    right: 4vw; 
+    top: 4vh;
+}
+
+.messageButton{ /* for the message button */
+    position: absolute;
+    border: none;
+    height: 4vh;
+    width: 4vh;
+    right: 7vw;
+    top: 4vh;
+}
+
