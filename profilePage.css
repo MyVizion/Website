@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8vw;
+}
+
+
+table { /* voor ruimte tussen de borders */
+    border-spacing: 1vh;
+}
+
+td{ /* voor ruimte aan de rechter kan van de borders */
+    padding-right: 2vw;
+}
+
+.socials{
+    display: inline-block;
+    border: none;
+    padding: 2px;
+    height: 4vh;
+    width: 2.6vw;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.socialsList{
+    display: flex;
+}
+
+/* socials colors */
+.insta{
+    background-color: #C66B6B;
+}
+.faceb{
+    background-color: #2E0CD8;
+}
+.twitter{
+    background-color: #47C4FF;
+}
+.snapc{
+    background-color: #FBCA17;
+}
+.google{
+    background-color: #DA2C01;
+
+    
+}
+
+/* end socials colors */
+div.trim{ /* als foto te groot word word hij af gesneden */
+    border: solid 1px lightgray;
+    overflow: hidden;
+    width: 10vh;
+    height: 10vh;
+}                             /* !! hier later andere oplossing voor? */
+
+.profilePic{ /* grote van de profile pic */
+    height: auto;
+    width: auto;
+
+    max-width: 10vh;
+    max-height: 10vh;
+}
+
