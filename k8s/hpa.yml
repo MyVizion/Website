@@ -1,0 +1,14 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+  name: myvizion-webhpa
+  namespace: default
+spec:
+  maxReplicas: 6
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: extensions/v1
+    kind: Deployment
+    name: myvizion-webimage
+  targetCPUUtilizationPercentage: 50
