@@ -9,7 +9,7 @@
 <main>
     <section> <!-- this the profile section -->
         <div class = "trim">
-            <img src="../testImg.jpg" alt="porfile Picture" class = "profilePic">
+            <img src="../testImg.jpg" alt="profile Picture" class = "profilePic">
         </div>
 
         <h1 class = "name">Test Name</h1>
