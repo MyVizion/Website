@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: myvizion-webimage
   labels:
-    app: php
+    app: web
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: php 
-      template:
+      app: web
+  template:
     metadata:
       labels:
-        app: php
+        app: web
     spec:
       containers:
       - name: myvizion-webimage
