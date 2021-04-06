@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myvizion-webimage
+  name: myvizion-web
   labels:
     app: web
 spec:
@@ -15,7 +15,7 @@ spec:
         app: web
     spec:
       containers:
-      - name: myvizion-webimage
+      - name: myvizion-web
         image: myvizion/website
         ports:
         - containerPort: 80
