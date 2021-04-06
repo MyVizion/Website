@@ -5,6 +5,10 @@
     font-size: 0.8vw;
 }
 
+.profile{ /* het gehele profiel stuk */
+    border: solid black 2px;
+}
+
 
 table { /* voor ruimte tussen de borders */
     border-spacing: 1vh;
@@ -49,6 +53,7 @@ td{ /* voor ruimte aan de rechter kan van de borders */
 
 /* end socials colors */
 div.trim{ /* als foto te groot word word hij af gesneden */
+    position: absolute;
     border: solid 1px lightgray;
     overflow: hidden;
     width: 10vh;
@@ -58,8 +63,11 @@ div.trim{ /* als foto te groot word word hij af gesneden */
 .profilePic{ /* grote van de profile pic */
     height: auto;
     width: auto;
-
     max-width: 10vh;
     max-height: 10vh;
+}
+
+.userName{
+    position: absolute;
 }
 

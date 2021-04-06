@@ -2,7 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 0.8vw;
+    font-size: 1px;
+}
+
+:root{
+    --borderRadius: 10px;
+    --Color: #228B22;
 }
 
 header{
@@ -12,64 +17,25 @@ header{
     text-align: center;
 }
 
-.title{
-    position: absolute;
-    left: 5vw;
-    top: 4vh;
-    font-size: 1.5vw;
+.navigation{
+    position: relative;
+    left: 15px;
 }
 
-.List{ /* for the navigation menu */
-    position: relative;
-    display: inline-block;
-    top: 6vh;
-    right: 12vw;
-    margin-right: 1vw;
+#listNav:hover{
+    border-bottom: solid 1px lightgrey;
+    cursor: pointer;
 }
 
-.LoginButton{ /* for both login and join button */
-    position: relative;
-    height: 3vh;
-    width: 4vw;
+.LoginButton{
+    border: none;
+    background-color: #39ee39;
     text-align: center;
-    border-radius: 0.2vw;
-    left: 32vw;
-    top: 3vh;
+    padding: 0.5rem 2rem;
+    border-radius: var(--borderRadius);
+    transition: all .1s ease-in;
 }
 
-.Login{ /* for the login button */
-    border: solid gray 0.1vw;
+.LoginButton:hover{
+    transform: scale(1.1);
 }
-.Join{ /* for the join button */
-    background-color: lawngreen;
-    border: none;
-}
-
-.profileButton{ /* for the profile button */
-    position: absolute;
-    border: solid gray 0.1vw;
-    border-radius: 50%;
-    height: 2vw;
-    width: 2vw;
-    top: 4.2vh;
-    right: 10vw;
-}
-
-.notlificationButton{ /* for the notlification button */
-    position: absolute;
-    border: none;
-    height: 4vh;
-    width: 4vh;
-    right: 4vw; 
-    top: 4vh;
-}
-
-.messageButton{ /* for the message button */
-    position: absolute;
-    border: none;
-    height: 4vh;
-    width: 4vh;
-    right: 7vw;
-    top: 4vh;
-}
-

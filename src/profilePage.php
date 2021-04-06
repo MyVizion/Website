@@ -7,13 +7,12 @@
 
 
 <main>
-    <section> <!-- this the profile section -->
+    <section class = "profile"> <!-- this the profile section -->
         <div class = "trim">
             <img src="../testImg.jpg" alt="porfile Picture" class = "profilePic">
         </div>
 
-        <h1 class = "name">Test Name</h1>
-
+        <h1 class = "userName">Test Name</h1>
         <button> Edit </button>
 
         <table> <!-- table with User info for other users to see -->
