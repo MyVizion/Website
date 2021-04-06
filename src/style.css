@@ -200,19 +200,6 @@ input, button:focus{
         grid-template-columns: auto auto;
         justify-content: center;
     }
-
-}
-
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .box-container{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        justify-content: center;
-    }
 }
 
 @media (max-width: 750px){
@@ -234,6 +221,20 @@ input, button:focus{
   and (max-height: 1366px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1.5) {
+    .box-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+    }
+}
+
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    section{
+        height: 300px;
+    }
     .box-container{
         display: grid;
         grid-template-columns: auto auto auto;
