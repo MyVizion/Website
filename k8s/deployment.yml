@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: myvizion-web
   labels:
-    app: web
+    app: myvizion-web
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: web
+      app: myvizion-web
   template:
     metadata:
       labels:
-        app: web
+        app: myvizion-web
     spec:
       containers:
       - name: myvizion-web

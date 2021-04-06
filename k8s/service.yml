@@ -4,6 +4,6 @@ metadata:
   name: myvizion-webservice
 spec:
   selector:
-    app: myvizion
+    app: myvizion-web
   ports:
     - port: 80 # Default port for image
