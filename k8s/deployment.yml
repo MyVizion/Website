@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myvizion-webimage
+  name: myvizion-web
   labels:
-    app: web
+    app: myvizion-web
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: web
+      app: myvizion-web
   template:
     metadata:
       labels:
-        app: web
+        app: myvizion-web
     spec:
       containers:
-      - name: myvizion-webimage
+      - name: myvizion-web
         image: myvizion/website
         ports:
         - containerPort: 80
