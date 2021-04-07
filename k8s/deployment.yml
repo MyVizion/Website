@@ -17,5 +17,6 @@ spec:
       containers:
       - name: myvizion-web
         image: myvizion/website
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
