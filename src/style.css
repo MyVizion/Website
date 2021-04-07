@@ -198,6 +198,32 @@ input, button:focus{
     .form-group{
         width: 320px;
     }
+    .btn .fa-search{
+        font-size: 18px;
+        margin-right: 3px;
+        color: #696966;
+    }
+    .btn .fa-search:hover{
+        font-size: 18px;
+    }
+    .box-container{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 600px) 
+    and (max-width: 700px){
+    section{
+        height: 200px;
+    }
+    .form-group{
+        width: 320px;
+    }
+    .btn .fa-search:hover{
+        font-size: 18px;
+    }
     .box-container{
         display: grid;
         grid-template-columns: auto;
@@ -209,6 +235,9 @@ input, button:focus{
     section{
         height: 275px;
     }
+    .btn .fa-search:hover{
+        font-size: 18px;
+    }
     .box-container{
         display: grid;
         grid-template-columns: auto auto;
@@ -219,6 +248,9 @@ input, button:focus{
 @media only screen and (min-width: 1200px) {
     section{
         height: 400px;
+    }
+    .btn .fa-search:hover{
+        font-size: 18px;
     }
     .box-container{
         display: grid;
