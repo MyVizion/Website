@@ -3,6 +3,10 @@ kind: Ingress
 metadata:
   name: myvizion-webingress
 spec:
+  tls:
+  - hosts:
+    - myvizion.net
+    secretName: myvizion-webtls
   rules:
   - host: myvizion.net
     http:
