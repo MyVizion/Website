@@ -1,7 +1,8 @@
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: myvizion-webhpa
+  name: myvizion-web-hpa
+  namespace: myvizion-web-ns
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
