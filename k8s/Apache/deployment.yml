@@ -6,6 +6,11 @@ metadata:
   labels:
     app: myvizion-web
 spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 3
+      maxUnavailable: 30%
+    type: RollingUpdate
   replicas: 3
   selector:
     matchLabels:
