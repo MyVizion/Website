@@ -2,37 +2,31 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myvizion-mysql
+  namespace: myvizion-web-ns
 spec:
   replicas: 1
   selector:
     matchLabels:
-      component: mysql
+      app: myvizion-mysql
   template:
     metadata:
       labels:
-        component: mysql
+        app: myvizion-mysql
     spec:
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       volumes:
-        - name: mysql-storage
+        - name: myvizion-mysql-storage
           persistentVolumeClaim:
-            claimName: mysql-pvc
+            claimName: myvizion-mysql-pvc
       containers:
         - name: mysql
           image: mysql:5.7
-          resources:
-            requests:
-              memory: "1Gi"
-              cpu: "200m"
-            limits:
-              memory: "2Gi"
-              cpu: "400m"
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 3306
           volumeMounts:
-            - name: mysql-storage
+            - name: myvizion-mysql-storage
               mountPath: /var/lib/mysql
           env:
             - name: MYSQL_USER

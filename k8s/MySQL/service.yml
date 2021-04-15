@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myvizion-mysql-service
+  namespace: myvizion-web-ns
+spec:
+  selector:
+    app: myvizion-mysql
+  ports:
+    - port: 3306 # Default port for image
