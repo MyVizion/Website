@@ -25,11 +25,11 @@ spec:
         image: myvizion/website
         imagePullPolicy: Always
         resources:
-          limits:
-            memory: 350Mi
-            cpu: "0.5"
           requests:
-            memory: 10Mi
-            cpu: 1m
+            memory: "100Mi"
+            cpu: "10m"
+          limits:
+            memory: "350Mi"
+            cpu: "250m"
         ports:
         - containerPort: 80
