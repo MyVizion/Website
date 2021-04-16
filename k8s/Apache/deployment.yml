@@ -29,7 +29,7 @@ spec:
             memory: 350Mi
             cpu: "0.5"
           requests:
-            memory: 300Mi
-            cpu: "0.25"
+            memory: 10Mi
+            cpu: 1m
         ports:
         - containerPort: 80
