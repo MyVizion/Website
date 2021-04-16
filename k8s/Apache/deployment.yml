@@ -11,7 +11,7 @@ spec:
       maxSurge: 30%
       maxUnavailable: 0
     type: RollingUpdate
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: myvizion-web
@@ -24,5 +24,12 @@ spec:
       - name: myvizion-web
         image: myvizion/website
         imagePullPolicy: Always
+        resources:
+          limits:
+            memory: 350Mi
+            cpu: "0.5"
+          requests:
+            memory: 300Mi
+            cpu: "0.25"
         ports:
         - containerPort: 80
