@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
     <!-- Jquery File -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <!-- Js File -->
-    <script src="index.js"></script>
+    <script src="/js/index.js"></script>
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/62026585de.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myVizion</title>
 </head>
 <body>
+
     <!--search section-------->
     <section>
         <!--container--------->
@@ -28,10 +29,9 @@
                     <!--dropdown list--------->
                     <div class="dropdown-list">
                         <ul>
-                           <li>Image</li>
-                           <li>Vector</li>
-                           <li>Music</li>
-                           <li>Video</li> 
+                           <li>Categories</li>
+                           <li>Likes</li>
+                           <li>Views</li>
                         </ul>
                     </div>
                 </div>
@@ -50,116 +50,27 @@
         <div class="projects">
             <!--container------------------------>
             <div class="box-container">
-                <!--1---------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
+                <?php
+                for ($i = 0; $i < 12; $i++) {
+                    echo "<div class=\"project-box\">
+                    <p class=\"project-name\">Web Development</p>
+                    <div class=\"bottom-border\">
+                    <image><i class=\"far fa-user-circle\"></i><p class=\"project-creator\">&nbsp;User</p></image>
+                    <p class=\"project-likes\"><i class=\"fas fa-heart\"></i>&nbsp;0</p>
+                    <p class=\"project-views\"><i class=\"far fa-eye\"></i>&nbsp;0</p>
                     </div>
-                </div> 
-                <!--2---------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
-                    </div>
-                </div>
-                <!--3---------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
-                    </div>
-                </div>
-                <!--4---------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
-                    </div>
-                </div>
-                <!--5---------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
-                    </div>
-                </div>
-                <!--6-------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
-                    </div>
-                </div>
-                <!--7---------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
-                    </div>
-                </div> 
-                <!--8---------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
-                    </div>
-                </div>
-                <!--9---------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
-                    </div>
-                </div>
-                 <!--10---------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
-                    </div>
-                </div>
-                <!--11---------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
-                    </div>
-                </div>
-                <!--12-------------------->
-                <div class="project-box">
-                    <p class="heading">Web Development</p>
-                    <div class="bottom-border">
-                        <image><i class="far fa-user-circle"></i><p class="user">&nbsp;User</p></image>
-                        <p class="heart"><i class="fas fa-heart"></i>&nbsp;0</p>
-                        <p class="seen"><i class="far fa-eye"></i>&nbsp;0</p>
-                    </div>
-                </div>
-                </div>
+                    </div>";
+                }
+                ?>         
             </div>
+        </div>
+             <!--Cookie popup-------------------------->
+        <div id="consent-popup" class="hidden">
+                <p>By using this site you agree to our <a href='#'>Terms and conditions</a>.
+                    Please Accept these before using our site &#x1F36A;.
+                    <button type="button" id="accept" class="accept-btn">Got it!</button>
+                </p>
+                
         </div>
 </body>
 </html>
