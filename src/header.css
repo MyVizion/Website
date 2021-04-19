@@ -1,16 +1,22 @@
 /*CSS HEADER FILE*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
-
+*{
+  box-sizing: border-box;
+}
 ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 a{
     text-decoration: none;
 }
 nav{
-    display: flex;
     font-family: nunito;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
     height: 80px;
     width: 100%;
     background-color: #ffffff;
@@ -64,11 +70,8 @@ nav a.active{
     margin-left: 7px;
     font-size: 20px;
 }
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+@media screen and (max-width: 1024px){
   nav ul{
     margin: 0px;
     padding: 0px;
@@ -103,113 +106,30 @@ nav a.active{
   .toggle:before{
     content: '\f0c9';
     font-family: fontAwesome;
-    margin-left: 600px;
     line-height: 30px;
     z-index: 1;
   }
   .toggle.active:before{
     content: '\f00d';
     position: fixed;
-    margin-left: 600px;
     line-height: 0px;
   }
   nav.active ul{
     display: flex !important;
-  } 
+  }
 }
 
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .toggle:before{
-    content: '\f0c9';
-    font-family: fontAwesome;
-    margin-left: 850px;
-    line-height: 30px;
-    z-index: 1;
-  }
-  .toggle.active:before{
-    content: '\f00d';
-    position: fixed;
-    margin-left: 850px;
-    line-height: 0px;
-  }
-}
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-@media screen and (min-width: 481px) and (max-width: 812px) {
-  .toggle:before{
-    content: '\f0c9';
-    font-family: fontAwesome;
-    margin-left: 650px;
-    line-height: 30px;
-    z-index: 1;
-  }
-  .toggle.active:before{
-    content: '\f00d';
-    position: fixed;
-    margin-left: 650px;
-    line-height: 0px;
-  }
-}
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-@media (min-width: 320px) and (max-width: 480px) {
-  nav ul{
-    margin: 0px;
-    padding: 0px;
-    background-color: #ffffff;
-    flex-direction: column;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    display: none;
-  }
-  nav ul li{
-    padding: 10px;
-  }
-  nav ul li .nav-link{
-    font-size: 1.4em;
-    text-transform: uppercase;
-    color: rgb(0, 0, 0);
-  }
-  nav ul li .nav-link:hover{
-    color: #121212;
-  }
+@media screen and (min-width: 1025px) and (max-width: 1366px){
   .btn-container{
-      margin-left: 0px;
+    margin-left: 300px;
   }
-  .toggle:before{
-    content: '\f0c9';
-    font-family: fontAwesome;
-    margin-left: 210px;
-    line-height: 30px;
-    z-index: 1;
-  }
-  .toggle.active:before{
-    content: '\f00d';
-    position: fixed;
-    margin-left: 210px;
-    line-height: 0px;
-  }
-  nav.active ul{
-    display: flex !important;
-  }
-  
 }
+
+
+
+
+
+
 
 
 
