@@ -1,0 +1,145 @@
+/*CSS HEADER FILE*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+*{
+  box-sizing: border-box;
+}
+
+:root{
+  --buttonHeight: 22%;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    font-family: nunito;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+    padding: 0 2%;
+}
+.Logo{
+    font-weight: 800;
+    font-size: 225%;
+}
+nav ul{
+    display: flex;
+}
+
+nav ul li a{
+  margin: 20;
+  color:#505050;
+  font-size: 150%;
+  font-weight: 800;
+}
+
+nav a.active{
+    border-bottom: 3% solid black;
+}
+.btn-container{
+    margin-left: 450;
+}
+
+.joinButton, .loginButton{
+    height: var(--buttonHeight);
+    width: 75;
+    font-size: 15;
+    font-weight: 500;
+    transition: all .1s ease-in;
+}
+
+.joinButton{
+    border: none;
+    background-color: #15da77;
+    margin-left: 10;
+    color: white;
+}
+.loginButton{
+    border: 1px solid black;
+    background-color: white;
+    transition: all .1s ease-in;
+}
+ 
+.Hbtn:hover{
+    transform: scale(1.1);
+}
+
+.Hicon{
+    margin-left: 7;
+    font-size: 20;
+}
+
+@media screen and (max-width: 1024px){
+  nav ul{
+    margin: 0;
+    padding: 0;
+    /* background-color: #ffffff; */
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    display: none;
+  }
+  nav ul li{
+    padding: 10;
+  }
+  nav ul li .nav-link{
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+  }
+  nav ul li .nav-link:hover{
+    color: #121212;
+  }
+  .btn-container{
+      margin-left: 0;
+  }
+  .toggle:before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    line-height: 30;
+    z-index: 1;
+  }
+  .toggle.active:before{
+    content: '\f00d';
+    position: fixed;
+    line-height: 0;
+  }
+  nav.active ul{
+    display: flex !important;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px){
+  .btn-container{
+    margin-left: 300;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
