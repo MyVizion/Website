@@ -39,12 +39,13 @@ class Profile extends \CodeIgniter\Controller
 			'socials' => $retSocials,
 			'about' => $retAbout
 		];
-		if(empty($query)) return view('site/messages/accountDoesntExist');
-		else return view('site/profilePage', $data);
+		if(empty($query)){ return view('site/messages/accountDoesntExist'); echo view('site/header.php');}
+		echo view('site/header.php');
+		echo view('site/profilePage', $data);
          // search bar moet myVizion/profileName worden 
 	}
 	
-	public function ProfileFormController()
+	public function ChangeProfile()
 	{
 		$user = new UserModel();
 
@@ -58,6 +59,8 @@ class Profile extends \CodeIgniter\Controller
             'changeUserName' => $ret
         ];
 
-        return view('site/profileForm', $data);
+		echo view('site/header.php');
+        echo view('site/ChangeForm', $data);
+		
 	} 
 }

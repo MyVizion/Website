@@ -1,6 +1,6 @@
-<?php
-    include_once "header.php"; // late in ci controller
-?> 
+<?= $this->extend('site/mainPage')?>
+
+<?= $this->section('content') ?>
 
 <link rel="stylesheet" href="css/profilePage.css">
 <link rel="shortcut icon" href="#" type="image/x-icon">
@@ -49,7 +49,7 @@
                 </section>
             </section>
         </section>
-    </section>
+    </section><!-- end section -->
     <!-- about -->
     <section id = "wrapper" class  = "container mt-5 p-1">
         <section class = "row">
@@ -58,9 +58,9 @@
                 <?= $about ?>
             </section>
         </section>
-    </section>
-<?php
-    include_once "cookies.php"; // late in ci controller
-?> 
+    </section> 
+    <!-- end section -->
 
 </main>
+
+<?= $this->endSection() ?>

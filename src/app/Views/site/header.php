@@ -1,6 +1,8 @@
+<?= $this->extend('site/mainPage')?>
+
+<?= $this->section('header') ?>
+
 <link rel="stylesheet" href="/css/header.css" type="text/css">
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="/js/index.js"></script>
 
 <!--navigation--------------------------->
 <nav>
@@ -24,3 +26,5 @@
     <!--hamburger--------------->
     <div class="toggle"></div>
 </nav>
+
+<?= $this->endSection() ?>
