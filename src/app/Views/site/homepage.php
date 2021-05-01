@@ -51,7 +51,7 @@
         <div class="projects">
             <!--container------------------------>
             <div class="box-container">
-                <?php echo view('/template/overview.php') ?>
+                <?php echo view('/site/overview.php') ?>
             </div> 
         </div>
 

@@ -12,12 +12,10 @@ body{
 
 .wrapperContainer{
     width: 100%;
-    margin: 70px 0px 0px 0px; 
     height: 450px;
-    /*background-image: url();*/
-    background-color: rgb(146, 146, 39);
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
+    background-image: url("/Images/image(cropped).png");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
 
@@ -154,7 +152,7 @@ input, button:focus{
     background-color: black;
     color: white;
     width: 275px;
-    height: 225px;
+    height: 250px;
     margin: 50px 30px 0px 30px; 
     background-repeat: no-repeat;
     background-size: cover;
@@ -181,13 +179,14 @@ input, button:focus{
     line-height: 19px;
 }
 
-.user{
+
+.project-creator{
     margin-right: 155px;
 }
-.seen{
+.project-views{
     margin-left: 5px;
 }
-.heart i{
+.project-likes i{
     color: red
 }
 

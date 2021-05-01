@@ -14,13 +14,13 @@ class Pages extends BaseController
         $data['projects'] = $model->getProjects($slug);
     
 
-        if ( ! is_file(APPPATH.'/Views/pages/'.$page.'.php')){
+        if ( ! is_file(APPPATH.'/Views/site/'.$page.'.php')){
             // Whoops, we don't have a page for that!
             throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
         }
 
-        echo view('template/header');
-        echo view('pages/'.$page, $data);
+        echo view('site/header');
+        echo view('site/'.$page, $data);
          #echo view('template/footer');	
 	}
 }

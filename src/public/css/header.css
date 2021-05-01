@@ -28,8 +28,8 @@ nav{
     padding: 0 2%;
 }
 
-.Logo{
-    font-weight: 800;
+.logo{
+    font-weight: 700;
     font-size: 225%;
 }
 nav ul{
@@ -39,7 +39,7 @@ nav ul{
 nav ul li a{
   margin: 20;
   color:#505050;
-  font-size: 150%;
+  font-size: 140%;
   font-weight: 800;
 }
 
@@ -59,15 +59,24 @@ nav a.active{
 }
 
 .joinButton{
-    border: none;
-    background-color: #15da77;
-    margin-left: 10;
-    color: white;
+  border: none;
+  background-color: #15da77;
+  height: 20px;
+  width: 75px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 10px;
+  color: white;
+  transition: all .1s ease-in;
 }
 .loginButton{
-    border: 1px solid black;
-    background-color: white;
-    transition: all .1s ease-in;
+  border: 1px solid black;
+  background-color: white;
+  height: 20px;
+  width: 75px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all .1s ease-in;
 }
  
 .Hbtn:hover{
