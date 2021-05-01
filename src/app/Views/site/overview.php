@@ -3,16 +3,16 @@
     <?php foreach ($projects as $project_item): ?>
 
         <div href="projects<?= esc($project_item['slug'], 'url') ?>" class="project-box">
-        <image class="project-image"><?php echo '<img src="data:image;base64,'.base64_encode($project_item['image']).'" alt="Image" style="width: 275px; height: 250px;">'?></image>
-            <p class="project-name"<?=esc($project_item['title'])?>></p>
+        <image><?php echo '<img  class="project-image" src="data:image;base64,'.base64_encode($project_item['image']).'" alt="Image" ">'?></image>
+            <p class="project-name"><?=esc($project_item['title'])?></p>
                 <div class="bottom-border">
-                    <img><i class="far fa-user-circle"></i><p class="project-creator">&nbsp;User</p></im>
-                    <p class="project-likes"><i class="fas fa-heart"></i>&nbsp;0</p>
-                    <p class="project-views"><i class="far fa-eye"></i>&nbsp;0</p>
+                    <p class="project-creator"><i class="far fa-user-circle"></i>&nbsp;<?=esc($project_item['creator'])?></p>
+                        <div class="statistics">
+                            <p class="project-likes"><i class="fas fa-heart"></i>&nbsp;<?=esc($project_item['likes'])?></p>
+                            <p class="project-views"><i class="far fa-eye"></i>&nbsp;<?=esc($project_item['views'])?></p>
+                        </div>
                 </div>
         </div>
-
-         
 
     <?php endforeach; ?>
 

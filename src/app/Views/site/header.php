@@ -13,7 +13,7 @@
         <li class = "navContent"><a href="#" class="active">Projects</a></li>
         <li class = "navContent"><a href="#">Feed</a></li>
         <li class = "navContent"><a href="#">Dashboard</a></li>
-        <li class = "navContent"><a href="#">Create Projects</a></li>
+        <li class = "navContent"><a href="createproject.php">Create Projects</a></li>
         <li class = "navContent"><a href="#">Profile</a></li>
 
         <div class="btn-container">

@@ -23,4 +23,30 @@ class Pages extends BaseController
         echo view('site/'.$page, $data);
          #echo view('template/footer');	
 	}
+
+    public function CreateProject()
+    {
+        $model = new ProjectModel();
+
+        if ($this->request->getMethod() === 'post' && $this->validate([
+                'title' => 'required|min_length[3]|max_length[255]',
+                'info'  => 'required',
+            ]))
+        {
+            $model->save([
+                'title' => $this->request->getPost('title'),
+                'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
+                'info'  => $this->request->getPost('info'),
+            ]);
+
+            echo view('project/success');
+
+        }
+        else
+        {
+            echo view('site/header', ['title' => 'Create a project item']);
+            echo view('site/createproject');
+            #echo view('templates/footer');
+        }
+    }
 }

@@ -8,6 +8,8 @@ class ProjectModel extends Model
 {
     protected $table = 'projects';
 
+    protected $allowedFields = ['title', 'slug', 'info'];
+
     public function getProjects($slug = false)
     {
         if ($slug === false)

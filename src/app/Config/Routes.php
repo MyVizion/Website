@@ -35,6 +35,9 @@ $routes->setAutoRoute(true);
 // $routes->get('/', 'Home::index');
 $routes->add('(:segment)', 'Profile::index/$1');
 $routes->add('(:any)/change', 'Profile::ChangeProfile');
+
+$routes->add('(:segment)', 'Pages::index/$1');
+$routes->add('(:any)/create', 'Pages::CreateProject');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
