@@ -33,7 +33,7 @@ $routes->setAutoRoute(false);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
-$routes->add('(:any)', 'Pages::index/$1');
+$routes->get('/', 'Pages::index');
 
 $routes->add('(:segment)', 'Profile::index/$1');
 $routes->add('(:any)/change', 'Profile::ChangeProfile');

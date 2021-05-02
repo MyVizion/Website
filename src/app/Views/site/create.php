@@ -1,15 +1,13 @@
-<h2><?= esc($title) ?></h2>
-
 <?= \Config\Services::validation()->listErrors() ?>
 
 <form action="/site/create" method="post">
     <?= csrf_field() ?>
 
-    <label for="title">Title</label>
-    <input type="input" name="title" /><br />
+    <input type="input" name="title" placeholder="Title" /><br/>
 
-    <label for="info">Text</label>
-    <textarea name="info"></textarea><br />
+    <textarea name="info" placeholder="type in project info"></textarea><br/>
+
+    <input type="file" name="image" value=""/><br/>
 
     <input type="submit" name="submit" value="Create Project" />
 </form>

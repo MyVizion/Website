@@ -11,7 +11,11 @@ class Projects extends BaseController
 	{
         $model = new ProjectModel();
 
-        $data['projects'] = $model->getProjects();
+        $data = [
+            'projects' => $model->getProjects(),
+        ];
+        var_dump($data['projects']);
+        exit(1);
 
         echo view('site/header');
         echo view('site/overview', $data);
@@ -22,7 +26,9 @@ class Projects extends BaseController
     {
         $model = new ProjectModel();
 
-        $data['projects'] = $model->getProjects();
+        $data = [
+            'projects' => $model->getProjects(),
+        ];
 
         if (empty($data['projects']))
         {
@@ -30,7 +36,7 @@ class Projects extends BaseController
         }
 
         #echo view('site/header', $data);
-        #echo view('site/view', $data);
+        echo view('site/create', $data);
         #echo view('templates/footer', $data);
     }
 
@@ -41,21 +47,23 @@ class Projects extends BaseController
         if ($this->request->getMethod() === 'post' && $this->validate([
                 'title' => 'required|min_length[3]|max_length[255]',
                 'info'  => 'required',
+                'image' => 'required',
             ]))
         {
             $model->save([
                 'title' => $this->request->getPost('title'),
                 'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
                 'info'  => $this->request->getPost('info'),
+                'image' => $this->request->getPost('image'),
             ]);
 
-            echo view('project/success');
+            #echo view('project/success');
 
         }
         else
         {
-            echo view('site/header', ['title' => 'Create a project item']);
-            echo view('site/createproject');
+            echo view('site/header');
+            echo view('site/create');
             #echo view('templates/footer');
         }
     }
