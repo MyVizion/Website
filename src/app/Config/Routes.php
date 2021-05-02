@@ -22,8 +22,8 @@ $routes->setDefaultController('Pages');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(true);
-
+$routes->setAutoRoute(false);
+ 
 /*
  * --------------------------------------------------------------------
  * Route Definitions
@@ -33,11 +33,19 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
+$routes->add('(:any)', 'Pages::index/$1');
+
 $routes->add('(:segment)', 'Profile::index/$1');
 $routes->add('(:any)/change', 'Profile::ChangeProfile');
 
-$routes->add('(:segment)', 'Pages::index/$1');
-$routes->add('(:any)/create', 'Pages::CreateProject');
+$routes->get('site/(:segment)', 'Projects::view/$1');
+$routes->get('site', 'Projects::index');
+$routes->get('(:any)', 'Pages::index/$1');
+
+$routes->match(['get', 'post'], 'site/create', 'Projects::create');
+$routes->get('site/(:segment)', 'Projects::view/$1');
+$routes->get('site', 'Projects::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

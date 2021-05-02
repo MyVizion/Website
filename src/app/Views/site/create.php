@@ -2,7 +2,7 @@
 
 <?= \Config\Services::validation()->listErrors() ?>
 
-<form action="/site/createproject" method="post">
+<form action="/site/create" method="post">
     <?= csrf_field() ?>
 
     <label for="title">Title</label>

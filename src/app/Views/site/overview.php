@@ -2,9 +2,9 @@
 
     <?php foreach ($projects as $project_item): ?>
 
-        <div href="projects<?= esc($project_item['slug'], 'url') ?>" class="project-box">
-        <image><?php echo '<img  class="project-image" src="data:image;base64,'.base64_encode($project_item['image']).'" alt="Image" ">'?></image>
-            <p class="project-name"><?=esc($project_item['title'])?></p>
+        <div class="project-box" href="/projects/<?= esc($project_item['slug'], 'url') ?>">
+            <image><?php echo '<img  class="project-image" src="data:image;base64,'.base64_encode($project_item['image']).'" alt="Image" ">'?></image>
+                <p class="project-name"><?=esc($project_item['title'])?></p>
                 <div class="bottom-border">
                     <p class="project-creator"><i class="far fa-user-circle"></i>&nbsp;<?=esc($project_item['creator'])?></p>
                         <div class="statistics">
@@ -13,7 +13,6 @@
                         </div>
                 </div>
         </div>
-
     <?php endforeach; ?>
 
 <?php else : ?>
