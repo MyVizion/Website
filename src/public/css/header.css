@@ -32,6 +32,12 @@ nav{
   font-weight: 800;
   font-size: 25px;
 }
+
+.logo-img{
+  height: 100px;
+  width: auto;
+}
+
 nav ul{
   display: flex;
 }

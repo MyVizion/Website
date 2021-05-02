@@ -17,6 +17,5 @@ class Pages extends BaseController
         echo view('site/'.$page);
         #echo view('template/footer');
 	}
-
 }
 

@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="/Images/logos/iconDarkRedNoBackground.png" type="image/x-icon">
         <link rel="stylesheet" href="/css/style.css" type="text/css" /><!-- hier naar kijken naar namen -->
         <!-- Jquery File -->
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

@@ -61,6 +61,5 @@ class Profile extends \CodeIgniter\Controller
 
 		echo view('site/header.php');
         echo view('site/ChangeForm', $data);
-		
 	} 
 }
