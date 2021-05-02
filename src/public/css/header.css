@@ -9,10 +9,12 @@
 }
 
 ul{
+  position: absolute;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
+  transform: translate(30vw);
 }
 a{
   text-decoration: none;

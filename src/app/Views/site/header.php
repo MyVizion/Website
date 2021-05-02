@@ -17,15 +17,15 @@
         <li class = "navContent"><a href="#">Dashboard</a></li>
         <li class = "navContent"><a href="site/create.php">Create Projects</a></li>
         <li class = "navContent"><a href="#">Profile</a></li>
-
-        <div class="btn-container">
+    </ul>
+        <!-- <div class="btn-container">
             <button class="loginButton Hbtn">Login</button>
             <button class="joinButton Hbtn">Join</button>
             <a class="fas fa-user-circle Hicon"></a>
             <a class="fas fa-envelope Hicon"></a>
             <a class="fas fa-bell Hicon"></a>
-        <div>
-    </ul>
+        <div> -->
+    
 
     <!--hamburger--------------->
     <div class="toggle"></div>
