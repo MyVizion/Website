@@ -7,7 +7,9 @@
 <!--navigation--------------------------->
 <nav>
     <!--logo----------------------------->
-    <a href="#" class="logo">Workspace</a>
+    <a href="#" class="logo">
+        <img class = "logo-img"src="/Images/logos/logoNoBackGroundRed.png" alt="HOME">
+    </a>
     <!--menu--------------------------------------->
     <ul class = "navList">
         <li class = "navContent"><a href="#" class="active">Projects</a></li>

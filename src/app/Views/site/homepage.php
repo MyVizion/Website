@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="/Images/logos/iconDarkRed.png" type="image/x-icon">
         <link rel="stylesheet" href="/css/style.css" type="text/css" />
         <!-- Jquery File -->
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -15,6 +16,9 @@
         <title>myVizion</title>
     </head>
 <body>
+<?= $this->extend('site/mainPage')?>
+
+<?= $this->section('content') ?>
 
     <!--search section-------->
     <section class = "wrapperContainer">
@@ -54,6 +58,9 @@
                 <?php echo view('/site/overview.php') ?>
             </div> 
         </div>
+        <?= $this->extend('site/mainPage')?>
+
+    <?= $this->endSection() ?> 
 
         <!--Cookie popup-------------------------->
         <!-- <div id="consent-popup" class="hidden">
