@@ -34,10 +34,8 @@ class Projects extends BaseController
         {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the project item: '. $slug);
         }
-
-        #echo view('site/header', $data);
+        
         echo view('site/create', $data);
-        #echo view('templates/footer', $data);
     }
 
     public function create()
