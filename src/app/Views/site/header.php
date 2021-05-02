@@ -7,7 +7,7 @@
 <!--navigation--------------------------->
 <nav>
     <!--logo----------------------------->
-    <a href="#" class="logo">
+    <a href="#" class="logo ">
         <img class = "logo-img"src="/Images/logos/logoNoBackGroundRed.png" alt="HOME">
     </a>
     <!--menu--------------------------------------->
