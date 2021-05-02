@@ -40,7 +40,7 @@ $routes->add('(:any)/change', 'Profile::ChangeProfile');
 
 $routes->get('site/(:segment)', 'Projects::view/$1');
 $routes->get('site', 'Projects::index');
-$routes->get('(:any)', 'Pages::index/$1');
+// $routes->get('(:any)', 'Pages::index/$1');
 
 $routes->match(['get', 'post'], 'site/create', 'Projects::create');
 $routes->get('site/(:segment)', 'Projects::view/$1');
