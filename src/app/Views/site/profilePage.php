@@ -10,8 +10,6 @@
 
 
 <main>
-    <button id = "DarkMode" onclick="DarkMode()">darkMode</button>
-
     <section id="wrapper" class="container p-5">
         <section class="row">
                 <section class="col middle"> <!-- this the profile section -->
@@ -19,11 +17,11 @@
                         <img class="img-fluid profileImage"src="testImg.jpg" alt="porfile Picture" class = "profilePic h-50 img-thumbnail">
                     </div>
                 </section>
-                <section class="col">
+                <section class="col-sm">
                     <h1 class = "userName"><?= $username ?></h1>
                     <button id="addFriendBtn" onClick = "<?= base_url(); ?> ProfileFrom">Edit Profile</button>
                 </section>
-                <section class="col">
+                <section class="col-sm">
                     <table> <!-- table with User info for other users to see -->
                         <tr>
                             <td>age</td>
@@ -51,9 +49,9 @@
         </section>
     </section><!-- end section -->
     <!-- about -->
-    <section id = "wrapper" class  = "container mt-5 p-1">
+    <section id = "wrapper" class  = "container mt-5 p-1 about">
         <section class = "row">
-            <section class = "col">
+            <section class = "col-sm About-Content">
                 <h3>About</h3>
                 <?= $about ?>
             </section>
