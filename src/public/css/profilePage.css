@@ -46,7 +46,7 @@ td{
     padding-left: 10;
 }
 .socials{
-    display: inline-block;
+    
     border: none;
     padding: 2px;
     height: 4vh;
@@ -56,15 +56,15 @@ td{
 }
 
 .socialsList{
-    
+    position: absolute;
     display: flex;
     padding-top: 30;
+    transform: translate(0%, 100%);
 }
 
 .socialsList a{
     color: white !important; 
 }
-
 /* socials colors */
 .insta{
     background-color: var(--instaColor);
@@ -85,12 +85,12 @@ td{
     text-align: center;
     padding: 0.5rem 2rem;
     border-radius: var(--borderRadius);
-    transition: all .1s ease-in;
+    /* transition: all .1s ease-in; */
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 #addFriendBtn:hover{
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 
 .middle img{
@@ -105,4 +105,12 @@ td{
     width: auto;
 }
 
+.About-Content{
+    transform: translate(0%);
+    height: 10px;
+}
+
+.about{
+    height: 200px;
+}
 
