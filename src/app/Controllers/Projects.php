@@ -14,9 +14,12 @@ class Projects extends BaseController
         $data = [
             'projects' => $model->getProjects(),
         ];
-        var_dump($data['projects']);
-        exit(1);
 
+        if (empty($data['projects']))
+        {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the project item: '. $slug);
+        }
+        
         echo view('site/header');
         echo view('site/overview', $data);
         #echo view('site/footer', $data);
@@ -30,11 +33,6 @@ class Projects extends BaseController
             'projects' => $model->getProjects(),
         ];
 
-        if (empty($data['projects']))
-        {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the project item: '. $slug);
-        }
-        
         echo view('site/create', $data);
     }
 
@@ -52,17 +50,16 @@ class Projects extends BaseController
                 'title' => $this->request->getPost('title'),
                 'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
                 'info'  => $this->request->getPost('info'),
-                'image' => $this->request->getPost('image'),
+                'image' => addslashes($this->request->getPost('image')),
             ]);
-
+            var_dump(addslashes($this->request->getPost('image')));
+              
             #echo view('project/success');
 
         }
         else
         {
-            echo view('site/header');
             echo view('site/create');
-            #echo view('templates/footer');
         }
     }
 }

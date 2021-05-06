@@ -25,7 +25,7 @@
         <!--container--------->
         <div id="container">
             <!--title--------------------->
-            <h1 class="title">Workspace</h1>
+            <h1 class="title">MyVizion</h1>
             <!--search bar---------------->
             <div class="form-group">
                 <!--dropdown menu--------->
