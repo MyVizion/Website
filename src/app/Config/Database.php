@@ -56,24 +56,24 @@ class Database extends Config
 	 *
 	 * @var array
 	 */
-	public $tests = [
+	public $test = [
 		'DSN'      => '',
-		'hostname' => '127.0.0.1',
-		'username' => '',
-		'password' => '',
-		'database' => ':memory:',
-		'DBDriver' => 'SQLite3',
-		'DBPrefix' => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
-		'pConnect' => false,
+		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
+		'username' => 'myvizion_backend',
+		'password' => 'j0kiia2w75m4zjjt',
+		'database' => 'myvizion',
+		'DBDriver' => 'MySQLi',
+		'DBPrefix' => '',
+		'pConnect' => FALSE,
 		'DBDebug'  => (ENVIRONMENT !== 'production'),
 		'charset'  => 'utf8',
 		'DBCollat' => 'utf8_general_ci',
 		'swapPre'  => '',
-		'encrypt'  => false,
+		'encrypt'  => true,
 		'compress' => false,
 		'strictOn' => false,
 		'failover' => [],
-		'port'     => 3306,
+		'port'     => 25060,
 	];
 
 	//--------------------------------------------------------------------

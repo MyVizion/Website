@@ -20,6 +20,7 @@ class Projects extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the project item: '. $slug);
         }
         
+
         echo view('site/header');
         echo view('site/overview', $data);
         #echo view('site/footer', $data);
@@ -33,6 +34,7 @@ class Projects extends BaseController
             'projects' => $model->getProjects(),
         ];
 
+        
         echo view('site/create', $data);
     }
 
