@@ -58,9 +58,9 @@ class Database extends Config
 	 */
 	public $test = [
 		'DSN'      => '',
-		'hostname' => 'myvizion.database.windows.net',
-		'username' => 'user1',
-		'password' => '4127W1er',
+		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
+		'username' => 'myvizion_backend',
+		'password' => 'j0kiia2w75m4zjjt',
 		'database' => 'myvizion',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
@@ -69,11 +69,11 @@ class Database extends Config
 		'charset'  => 'utf8',
 		'DBCollat' => 'utf8_general_ci',
 		'swapPre'  => '',
-		'encrypt'  => false,
+		'encrypt'  => true,
 		'compress' => false,
 		'strictOn' => false,
 		'failover' => [],
-		'port'     => 3306,
+		'port'     => 25060,
 	];
 
 	//--------------------------------------------------------------------
