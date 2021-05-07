@@ -5,7 +5,7 @@ metadata:
   namespace: myvizion-webtest-ns
 spec:
   dnsNames:
-    - myvizion.net
+    - dev-test.myvizion.net
   secretName: myvizion-webtest-tls
   issuerRef:
     name: letsencrypt-cluster-issuer
