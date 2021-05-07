@@ -31,7 +31,7 @@
                                         <p class="file-name"></p>
                                     </label>
                             </div> -->
-                <input class="file-btn" type="file" name="image" value=""/><br/>
+                <input class="file-btn" type="file" name="image"/><br/>
                 <input class="create-btn" type="submit" name="submit" value="Create Project"/>
             </form>
         </div>

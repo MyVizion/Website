@@ -46,17 +46,21 @@ class Projects extends BaseController
         if ($this->request->getMethod() === 'post' && $this->validate([
                 'title' => 'required|min_length[3]|max_length[255]',
                 'info'  => 'required',
-                'image' => 'required',
+                'image' => 'uploaded[image]',
             ]))
         {
+            $tempfile = $file->getTempName();
+            $imgdata = file_get_contents($tempfile);
+
             $model->save([
                 'title' => $this->request->getPost('title'),
                 'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
                 'info'  => $this->request->getPost('info'),
-                $tempfile = $file->getTempName(),
-                $imgdata = file_get_contents($tempfile),
+                'image' => $imgdata,
             ]);
-            
+            var_dump($imgdata);
+
+
             #echo view('project/success');
         }
         else
