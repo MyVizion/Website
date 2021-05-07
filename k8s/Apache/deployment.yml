@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: myvizion-web
-        image: myvizion/website:0.0.2
+        image: myvizion/website:test
         imagePullPolicy: Always
         resources:
           requests:
