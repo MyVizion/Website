@@ -38,13 +38,13 @@ RUN cd /var/www/html
 RUN composer create-project codeigniter4/appstarter codeigniter4 v4.1.1
 RUN chmod -R 0777 /var/www/html/codeigniter4/writable
 
+COPY src/app/ /var/www/html/codeigniter4/app/
+
 RUN mv codeigniter4 /
 
 RUN apt-get clean \
     && rm -r /var/lib/apt/lists/*
     
-COPY src/app/ /var/www/html/codeigniter4/app/
-
 EXPOSE 80
 VOLUME ["/var/www/html", "/var/log/apache2", "/etc/apache2"]
 
