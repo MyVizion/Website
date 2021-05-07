@@ -59,9 +59,9 @@ class Database extends Config
 	public $test = [
 		'DSN'      => '',
 		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
-		'username' => 'myvizion_backend',
-		'password' => 'j0kiia2w75m4zjjt',
-		'database' => 'myvizion',
+		'username' => 'myvizion_backend_test',
+		'password' => 'kjuudci14l5yot5n',
+		'database' => 'myvizion_test',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => FALSE,
