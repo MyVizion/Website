@@ -1,21 +1,21 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: myvizion-web-ingress
-  namespace: myvizion-web-ns
+  name: myvizion-webtest-ingress
+  namespace: myvizion-webtest-ns
 spec:
   tls:
   - hosts:
     - myvizion.net
-    secretName: myvizion-web-tls
+    secretName: myvizion-webtest-tls
   rules:
-  - host: myvizion.net
+  - host: dev-test.myvizion.net
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: myvizion-web-service
+            name: myvizion-webtest-service
             port:
               number: 80

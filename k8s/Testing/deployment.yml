@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myvizion-web
-  namespace: myvizion-web-ns
+  name: myvizion-webtest
+  namespace: myvizion-webtest-ns
   labels:
-    app: myvizion-web
+    app: myvizion-webtest
 spec:
   strategy:
     rollingUpdate:
@@ -14,15 +14,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myvizion-web
+      app: myvizion-webtest
   template:
     metadata:
       labels:
-        app: myvizion-web
+        app: myvizion-webtest
     spec:
       containers:
-      - name: myvizion-web
-        image: myvizion/website:test
+      - name: myvizion-webtest
+        image: myvizion/website:devtest
         imagePullPolicy: Always
         resources:
           requests:

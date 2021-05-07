@@ -1,12 +1,12 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: myvizion-web-cert
-  namespace: myvizion-web-ns
+  name: myvizion-webtest-cert
+  namespace: myvizion-webtest-ns
 spec:
   dnsNames:
     - myvizion.net
-  secretName: myvizion-web-tls
+  secretName: myvizion-webtest-tls
   issuerRef:
     name: letsencrypt-cluster-issuer
     kind: ClusterIssuer
