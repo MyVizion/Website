@@ -60,7 +60,7 @@ class Database extends Config
 		'DSN'      => '',
 		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
 		'username' => 'myvizion_backend_test',
-		'password' => 'kjuudci14l5yot5n',
+		'password' => 'a7j8w8uo30uvz8mv',
 		'database' => 'myvizion_test',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
