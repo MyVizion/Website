@@ -14,28 +14,26 @@
         </head>
     <body>
         <div class="parent">
-            <?= \Config\Services::validation()->listErrors() ?>
-                <form action="/site/create" method="post">
-                <h1>Create Project</h1>
+        <?= \Config\Services::validation()->listErrors() ?>
+            <form action="/site/create" method="post" enctype="multipart/form-data">
+                 <h1>Create Project</h1>
                     <?= csrf_field() ?>
-                    <div class="form-group">
-                        <input class="ph-title" type="input" name="title" placeholder="Title" /><br/>
-                    </div>
-                    <div class="grow-wrap">
-                        <textarea class="ph-info" name="info" placeholder="Type in project info"></textarea>
-                    </div>
-
-                   <!-- <div class="file-input">
-                        
-                            <label for="file">
-                                Select file
-                                <p class="file-name"></p>
-                            </label>
-                    </div> -->
-
-                    <input class="file-btn" type="file" name="image" value=""/><br/>
-                    <input class="create-btn" type="submit" name="submit" value="Create Project"/>
-                </form>
+                        <div class="form-group">
+                            <input class="ph-title" type="input" name="title" placeholder="Title" /><br/>
+                        </div>
+                        <div class="grow-wrap">
+                            <textarea class="ph-info" name="info" placeholder="Type in project info"></textarea>
+                        </div>
+                        <!-- <div class="file-input">
+                                
+                                    <label for="file">
+                                        Select file
+                                        <p class="file-name"></p>
+                                    </label>
+                            </div> -->
+                <input class="file-btn" type="file" name="image" value=""/><br/>
+                <input class="create-btn" type="submit" name="submit" value="Create Project"/>
+            </form>
         </div>
     </body>
 </html>

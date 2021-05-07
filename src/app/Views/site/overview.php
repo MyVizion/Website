@@ -3,7 +3,7 @@
     <?php foreach ($projects as $project_item): ?>
 
         <div class="project-box" href="/projects/<?= esc($project_item['slug'], 'url') ?>">
-            <image><?php echo '<img class="project-image" src="data:image/jpeg;base64,'.base64_encode($project_item['image']).'" alt="Image" ">'?></image>
+            <?php echo '<img class="project-image" src="data:image/jpeg;base64,'.base64_encode($project_item['image']).'" alt="image" ">'?>
                 <p class="project-name"><?=esc($project_item['title'])?></p>
                 <div class="bottom-border">
                     <p class="project-creator"><i class="far fa-user-circle"></i>&nbsp;<?=esc($project_item['creator'])?></p>
