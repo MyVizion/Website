@@ -41,19 +41,7 @@ class Projects extends BaseController
     {
         $model = new ProjectModel();
 
-        $files = $this->request->getFiles();
-        
-        if($imagefile = $this->request->getFiles())
-        {
-            foreach($imagefile['image'] as $img)
-            {
-                if ($img->isValid() && ! $img->hasMoved())
-                {
-                    $newName = $img->getRandomName();
-                    $img->move(WRITEPATH.'uploads', $newName);
-                }
-            }
-        }
+        $file = $this->request->getFile('image');
 
         if ($this->request->getMethod() === 'post' && $this->validate([
                 'title' => 'required|min_length[3]|max_length[255]',
@@ -61,17 +49,14 @@ class Projects extends BaseController
                 'image' => 'required',
             ]))
         {
-        
             $model->save([
                 'title' => $this->request->getPost('title'),
                 'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
                 'info'  => $this->request->getPost('info'),
-                'image' => addslashes($this->request->getPost('image')),
-                $tempfile = $files->getTempName(),
+                $tempfile = $file->getTempName(),
                 $imgdata = file_get_contents($tempfile),
             ]);
-            var_dump(addslashes($this->request->getPost('image')));
-              
+            
             #echo view('project/success');
         }
         else
