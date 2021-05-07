@@ -43,6 +43,8 @@ RUN mv codeigniter4 /
 RUN apt-get clean \
     && rm -r /var/lib/apt/lists/*
     
+COPY app/ /var/www/html/codeigniter4/app/
+
 EXPOSE 80
 VOLUME ["/var/www/html", "/var/log/apache2", "/etc/apache2"]
 
