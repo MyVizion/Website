@@ -32,7 +32,7 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
+		'hostname' => 'clu-01.mysql.ams3.myvizion.net',
 		'username' => 'myvizion',
 		'password' => 'sz4ju8w26a6jqf5n',
 		'database' => 'myvizion_test',
@@ -58,7 +58,7 @@ class Database extends Config
 	 */
 	public $test = [
 		'DSN'      => '',
-		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
+		'hostname' => 'clu-01.mysql.ams3.myvizion.net',
 		'username' => 'myvizion',
 		'password' => 'sz4ju8w26a6jqf5n',
 		'database' => 'myvizion_test',
