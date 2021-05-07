@@ -32,10 +32,10 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => '',
-		'database' => 'myvizionprofile',
+		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
+		'username' => 'myvizion',
+		'password' => 'sz4ju8w26a6jqf5n',
+		'database' => 'myvizion_test',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => FALSE,
@@ -47,7 +47,7 @@ class Database extends Config
 		'compress' => false,
 		'strictOn' => false,
 		'failover' => [],
-		'port'     => 3306,
+		'port'     => 25060,
 	];
 
 	/**
@@ -59,8 +59,8 @@ class Database extends Config
 	public $test = [
 		'DSN'      => '',
 		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
-		'username' => 'doadmin',
-		'password' => 'a718y2lm1umk9vk6',
+		'username' => 'myvizion',
+		'password' => 'sz4ju8w26a6jqf5n',
 		'database' => 'myvizion_test',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
