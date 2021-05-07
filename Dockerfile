@@ -30,8 +30,8 @@ ADD conf/apache.conf /etc/apache2/sites-available/000-default.conf
 
 RUN a2enmod rewrite
 
-ADD startScript.sh /startScript.sh
-RUN chmod +x /startScript.sh
+ADD start.sh /start.sh
+RUN chmod +x /start.sh
 
 RUN cd /var/www/html
 
@@ -46,4 +46,4 @@ RUN apt-get clean \
 EXPOSE 80
 VOLUME ["/var/www/html", "/var/log/apache2", "/etc/apache2"]
 
-CMD ["bash", "/startScript.sh"]
+CMD ["bash", "/start.sh"]
