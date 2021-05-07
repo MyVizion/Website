@@ -45,7 +45,7 @@ COPY src/writable/ /var/www/html/codeigniter4/writable/
 
 RUN mv codeigniter4 /
 
-RUN chmod -R 755 /
+RUN chmod -R 777 /var/www/html/
 
 RUN apt-get clean \
     && rm -r /var/lib/apt/lists/*
