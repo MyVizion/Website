@@ -38,10 +38,7 @@ RUN cd /var/www/html
 RUN composer create-project codeigniter4/appstarter codeigniter4 v4.1.1
 RUN chmod -R 0777 /var/www/html/codeigniter4/writable
 
-COPY src/app/ /var/www/html/codeigniter4/app/
-COPY src/system/ /var/www/html/codeigniter4/system/
-COPY src/public/ /var/www/html/codeigniter4/public/
-COPY src/writable/ /var/www/html/codeigniter4/writable/
+COPY src/ /var/www/html/codeigniter4/
 
 RUN mv codeigniter4 /
 
