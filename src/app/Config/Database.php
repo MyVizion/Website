@@ -32,7 +32,7 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com:25060',
+		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
 		'username' => 'doadmin',
 		'password' => 'a718y2lm1umk9vk6',
 		'database' => 'defaultdb',
@@ -40,10 +40,12 @@ class Database extends Config
 		'DBPrefix' => '',
 		'pConnect' => FALSE,
 		'DBDebug'  => (ENVIRONMENT !== 'production'),
-		'charset'  => '',
-		'DBCollat' => '',
+		'charset'  => 'utf8',
+		'DBCollat' => 'utf8_general_ci',
 		'swapPre'  => '',
-		'encrypt'  => true,
+		'encrypt' => [
+			'ssl_verify' => TRUE
+		],
 		'compress' => false,
 		'strictOn' => false,
 		'failover' => [],
