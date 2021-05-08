@@ -31,7 +31,7 @@ class Database extends Config
 	 * @var array
 	 */
 	public $default = [
-		'DSN'      => '',
+		'DSN'      => 'mysql://doadmin:show-password@ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com:25060/defaultdb?ssl-mode=REQUIRED',
 		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
 		'username' => 'myvizion',
 		'password' => 'yzcaao1rqi665cb3',
@@ -57,7 +57,7 @@ class Database extends Config
 	 * @var array
 	 */
 	public $tests = [
-		'DSN'      => '',
+		'DSN'      => 'mysql://doadmin:show-password@ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com:25060/defaultdb?ssl-mode=REQUIRED',
 		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
 		'username' => 'myvizion',
 		'password' => 'yzcaao1rqi665cb3',
