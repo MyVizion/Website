@@ -30,7 +30,7 @@ class Database extends Config
 	 *
 	 * @var array
 	 */
-	$default['DSN'] = 'mysql://myvizion:sz4ju8w26a6jqf5n@ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com:25060/myvizion_test?ssl-mode=REQUIRED';
+	public $default = ['DSN'      => 'mysql://myvizion:sz4ju8w26a6jqf5n@ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com:25060/myvizion_test?ssl-mode=REQUIRED'];
 
 	/**
 	 * This database connection is used when
@@ -38,7 +38,7 @@ class Database extends Config
 	 *
 	 * @var array
 	 */
-	$tests['DSN'] = 'mysql://myvizion:sz4ju8w26a6jqf5n@ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com:25060/myvizion_test?ssl-mode=REQUIRED';
+	public $tests = ['DSN'      => 'mysql://myvizion:sz4ju8w26a6jqf5n@ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com:25060/myvizion_test?ssl-mode=REQUIRED'];
 
 	//--------------------------------------------------------------------
 
