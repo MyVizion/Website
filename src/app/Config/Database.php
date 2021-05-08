@@ -23,32 +23,14 @@ class Database extends Config
 	 *
 	 * @var string
 	 */
-	public $defaultGroup = 'test';
+	public $defaultGroup = 'tests';
 
 	/**
 	 * The default database connection.
 	 *
 	 * @var array
 	 */
-	public $default = [
-		'DSN'      => '',
-		'hostname' => 'clu-01.mysql.ams3.myvizion.net',
-		'username' => 'myvizion',
-		'password' => 'sz4ju8w26a6jqf5n',
-		'database' => 'myvizion_test',
-		'DBDriver' => 'MySQLi',
-		'DBPrefix' => '',
-		'pConnect' => FALSE,
-		'DBDebug'  => (ENVIRONMENT !== 'production'),
-		'charset'  => 'utf8mb4',
-		'DBCollat' => 'utf8mb4_0900_ai_ci',
-		'swapPre'  => '',
-		'encrypt'  => true,
-		'compress' => false,
-		'strictOn' => false,
-		'failover' => [],
-		'port'     => 25060,
-	];
+	public $default['DSN'] = 'mysql://myvizion:sz4ju8w26a6jqf5n@ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com:25060/myvizion_test?ssl-mode=REQUIRED';
 
 	/**
 	 * This database connection is used when
@@ -56,25 +38,7 @@ class Database extends Config
 	 *
 	 * @var array
 	 */
-	public $test = [
-		'DSN'      => '',
-		'hostname' => 'clu-01.mysql.ams3.myvizion.net',
-		'username' => 'myvizion',
-		'password' => 'sz4ju8w26a6jqf5n',
-		'database' => 'myvizion_test',
-		'DBDriver' => 'MySQLi',
-		'DBPrefix' => '',
-		'pConnect' => FALSE,
-		'DBDebug'  => (ENVIRONMENT !== 'production'),
-		'charset'  => 'utf8mb4',
-		'DBCollat' => 'utf8mb4_0900_ai_ci',
-		'swapPre'  => '',
-		'encrypt'  => true,
-		'compress' => false,
-		'strictOn' => false,
-		'failover' => [],
-		'port'     => 25060,
-	];
+	public $tests['DSN'] = 'mysql://myvizion:sz4ju8w26a6jqf5n@ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com:25060/myvizion_test?ssl-mode=REQUIRED';
 
 	//--------------------------------------------------------------------
 
@@ -87,7 +51,7 @@ class Database extends Config
 		// we don't overwrite live data on accident.
 		if (ENVIRONMENT === 'testing')
 		{
-			$this->defaultGroup = 'test';
+			$this->defaultGroup = 'tests';
 		}
 	}
 
