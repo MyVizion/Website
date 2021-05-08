@@ -44,12 +44,7 @@ class Database extends Config
 		'DBCollat' => 'utf8_general_ci',
 		'swapPre'  => '',
 		'encrypt' => [
-			'ssl_key'    => '/etc/apache2/ssl/apache.key',
-			'ssl_cert'   => '/etc/apache2/ssl/apache.crt',
-			'ssl_ca'     => '/var/www/html/codeigniter4/ca-certificate.crt',
-			'ssl_capath' => NULL,
-			'ssl_cipher' => 'DHE-RSA-AES256-SHA',
-			'ssl_verify' => TRUE
+			'ssl_verify' => FALSE
 		],
 		'compress' => false,
 		'strictOn' => false,
