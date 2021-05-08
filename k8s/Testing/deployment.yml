@@ -11,7 +11,7 @@ spec:
       maxSurge: 30%
       maxUnavailable: 0
     type: RollingUpdate
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: myvizion-webtest
