@@ -56,7 +56,7 @@ class Database extends Config
 	 *
 	 * @var array
 	 */
-	public $test = [
+	public $tests = [
 		'DSN'      => '',
 		'hostname' => 'clu-01.mysql.ams3.myvizion.net',
 		'username' => 'myvizion',
