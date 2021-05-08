@@ -33,8 +33,8 @@ class Database extends Config
 	public $default = [
 		'DSN'      => '',
 		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
-		'username' => 'doadmin',
-		'password' => 'a718y2lm1umk9vk6',
+		'username' => 'myvizion',
+		'password' => 'yzcaao1rqi665cb3',
 		'database' => 'defaultdb',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
@@ -44,7 +44,12 @@ class Database extends Config
 		'DBCollat' => 'utf8_general_ci',
 		'swapPre'  => '',
 		'encrypt' => [
-			'ssl_verify' => FALSE
+			'ssl_key'    => '/etc/apache2/ssl/apache.key',
+			'ssl_cert'   => '/etc/apache2/ssl/apache.crt',
+			'ssl_ca'     => '/var/www/html/codeigniter4/ca-certificate.crt',
+			'ssl_capath' => NULL,
+			'ssl_cipher' => 'DHE-RSA-AES256-SHA',
+			'ssl_verify' => TRUE
 		],
 		'compress' => false,
 		'strictOn' => false,
