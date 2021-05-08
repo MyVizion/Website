@@ -43,7 +43,7 @@ class Database extends Config
 		'charset'  => '',
 		'DBCollat' => '',
 		'swapPre'  => '',
-		'encrypt'  => false,
+		'encrypt'  => true,
 		'compress' => false,
 		'strictOn' => false,
 		'failover' => [],
