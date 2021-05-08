@@ -6,7 +6,7 @@ metadata:
 spec:
   tls:
   - hosts:
-    - myvizion.net
+    - dev-test.myvizion.net
     secretName: myvizion-webtest-tls
   rules:
   - host: dev-test.myvizion.net
