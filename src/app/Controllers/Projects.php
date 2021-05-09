@@ -42,13 +42,14 @@ class Projects extends BaseController
         $model = new ProjectModel();
 
         $file = $this->request->getFile('image');
-
+ 
         if ($this->request->getMethod() === 'post' && $this->validate([
                 'title' => 'required|min_length[3]|max_length[255]',
                 'info'  => 'required',
                 'image' => 'uploaded[image]',
             ]))
         {
+
             $tempfile = $file->getTempName();
             $imgdata = file_get_contents($tempfile);
 
@@ -58,9 +59,14 @@ class Projects extends BaseController
                 'info'  => $this->request->getPost('info'),
                 'image' => $imgdata,
             ]);
+<<<<<<< HEAD
             var_dump($imgdata);
 
             echo view('site/Messages/success');
+=======
+
+            #echo view('project/success');
+>>>>>>> 9d6533647275bd3c2e63035bc95a16c9677710b4
         }
         else
         {

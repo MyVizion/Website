@@ -1,8 +1,13 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: myvizion-webingress
+  name: myvizion-web-ingress
+  namespace: myvizion-web-ns
 spec:
+  tls:
+  - hosts:
+    - myvizion.net
+    secretName: myvizion-web-tls
   rules:
   - host: myvizion.net
     http:
@@ -11,6 +16,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: myvizion-webservice
+            name: myvizion-web-service
             port:
               number: 80

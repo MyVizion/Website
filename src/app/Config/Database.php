@@ -23,7 +23,7 @@ class Database extends Config
 	 *
 	 * @var string
 	 */
-	public $defaultGroup = 'default';
+	public $defaultGroup = 'test';
 
 	/**
 	 * The default database connection.
@@ -58,10 +58,10 @@ class Database extends Config
 	 */
 	public $test = [
 		'DSN'      => '',
-		'hostname' => 'ams3-mysql-clu-01-do-user-8330627-0.b.db.ondigitalocean.com',
-		'username' => 'myvizion_backend',
-		'password' => 'j0kiia2w75m4zjjt',
-		'database' => 'myvizion',
+		'hostname' => 'localhost',
+		'username' => 'root',
+		'password' => '',
+		'database' => '',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => FALSE,
@@ -69,11 +69,11 @@ class Database extends Config
 		'charset'  => 'utf8',
 		'DBCollat' => 'utf8_general_ci',
 		'swapPre'  => '',
-		'encrypt'  => true,
+		'encrypt'  => false,
 		'compress' => false,
 		'strictOn' => false,
 		'failover' => [],
-		'port'     => 25060,
+		'port'     => 3306,
 	];
 
 	//--------------------------------------------------------------------
