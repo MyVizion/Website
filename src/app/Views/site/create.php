@@ -24,14 +24,14 @@
                         <div class="grow-wrap">
                             <textarea class="ph-info" name="info" placeholder="Type in project info"></textarea>
                         </div>
-                        <!-- <div class="file-input">
-                                
+                        <div class="file-input">
+                            <input class="file" id="file" type="file" name="image"/>
                                     <label for="file">
                                         Select file
-                                        <p class="file-name"></p>
+                                        <p class="fileName"></p>
                                     </label>
-                            </div> -->
-                <input class="file-btn" type="file" name="image"/><br/>
+                            </div> 
+                
                 <input class="create-btn" type="submit" name="submit" value="Create Project"/>
             </form>
         </div>

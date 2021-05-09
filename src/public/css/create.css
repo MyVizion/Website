@@ -96,14 +96,14 @@ body{
     font-size: 14px;
 }
 
-.file-name {
+.fileName {
     position: absolute;
-    bottom: -10px;
+    margin-top: 50px;
     left: 10px;
     font-size: 0.85rem;
     color: #555;
     z-index: 1;
-}
+} 
 
 .create-btn{
     margin-left: 50%;

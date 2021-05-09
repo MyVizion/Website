@@ -60,8 +60,7 @@ class Projects extends BaseController
             ]);
             var_dump($imgdata);
 
-
-            #echo view('project/success');
+            echo view('site/Messages/success');
         }
         else
         {
