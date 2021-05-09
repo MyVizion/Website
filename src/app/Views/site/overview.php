@@ -17,7 +17,7 @@
 
 <?php else : ?>
 
-    <h3>No Projects</h3>
+    <h3>No Projects</h3>     
 
 <?php endif ?>
 

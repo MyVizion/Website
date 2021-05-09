@@ -9,12 +9,10 @@
 }
 
 ul{
-  position: absolute;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  transform: translate(30vw);
 }
 a{
   text-decoration: none;
@@ -23,23 +21,17 @@ nav{
   font-family: nunito;
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   height: 80px;
   width: 100%;
   background-color: #ffffff;
   box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
   padding: 0 2%;
 }
-.logo{
-  font-weight: 800;
-  font-size: 25px;
-}
-
 .logo-img{
   height: 100px;
   width: auto; 
 }
-
 nav ul{
   display: flex;
 }

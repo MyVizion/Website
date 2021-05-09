@@ -59,8 +59,14 @@ class Projects extends BaseController
                 'info'  => $this->request->getPost('info'),
                 'image' => $imgdata,
             ]);
+<<<<<<< HEAD
+            var_dump($imgdata);
+
+            echo view('site/Messages/success');
+=======
 
             #echo view('project/success');
+>>>>>>> 9d6533647275bd3c2e63035bc95a16c9677710b4
         }
         else
         {
