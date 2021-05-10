@@ -23,7 +23,7 @@ class Database extends Config
 	 *
 	 * @var string
 	 */
-	public $defaultGroup = 'test';
+	public $defaultGroup = 'default';
 
 	/**
 	 * The default database connection.
@@ -35,7 +35,7 @@ class Database extends Config
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'database' => 'myvizionprofile',
+		'database' => 'myvizion',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => FALSE,
