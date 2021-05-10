@@ -30,10 +30,10 @@
                                         Select file
                                         <p class="fileName"></p>
                                     </label>
-                            </div> 
+                        </div> 
                 
                 <input class="create-btn" type="submit" name="submit" value="Create Project"/>
             </form>
         </div>
     </body>
-</html>
+</html>                                                                                                                                                                                                                                  
