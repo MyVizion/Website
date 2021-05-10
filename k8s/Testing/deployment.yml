@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: myvizion-webtest
-        image: myvizion/website:latest
+        image: myvizion/website:fc-branch
         imagePullPolicy: Always
         resources:
           requests:
