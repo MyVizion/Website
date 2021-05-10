@@ -60,7 +60,6 @@ class Projects extends BaseController
             ]);
 
             echo view('site/Messages/success');
-
         }
         else       
         {
