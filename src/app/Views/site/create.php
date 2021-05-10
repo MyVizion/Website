@@ -30,15 +30,8 @@
                                         Select file
                                         <p class="fileName"></p>
                                     </label>
-<<<<<<< HEAD
-                            </div> 
+                        </div> 
                 
-=======
-                            </div> -->
-              
-                <input class="file-btn" type="file" name="image"/><br/>
-
->>>>>>> 9d6533647275bd3c2e63035bc95a16c9677710b4
                 <input class="create-btn" type="submit" name="submit" value="Create Project"/>
             </form>
         </div>
