@@ -48,7 +48,7 @@ class Projects extends BaseController
                 'image' => 'uploaded[image]',
             ]))
         {
-
+            
             $tempfile = $file->getTempName();
             $imgdata = file_get_contents($tempfile);
 

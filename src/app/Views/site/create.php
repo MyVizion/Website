@@ -10,7 +10,7 @@
             <!-- Fontawesome -->
             <script src="https://kit.fontawesome.com/62026585de.js" crossorigin="anonymous"></script>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>myVizion</title>
+            <title>Create</title>
         </head>
     <body>
         <div class="parent">
@@ -26,12 +26,11 @@
                         </div>
                         <div class="file-input">
                             <input class="file" id="file" type="file" name="image"/>
-                                    <label for="file">
-                                        Select file
-                                        <p class="fileName"></p>
-                                    </label>
-                        </div> 
-                
+                                <label for="file">
+                                    Select file
+                                    <p class="fileName"></p>
+                                </label>
+                        </div>
                 <input class="create-btn" type="submit" name="submit" value="Create Project"/>
             </form>
         </div>

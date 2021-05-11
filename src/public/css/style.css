@@ -176,7 +176,7 @@ input, button:focus{
 .statistics{
     justify-content: space-between;
     display: flex;
-}
+} 
 .project-likes{
     margin-right: 5px;
 }
