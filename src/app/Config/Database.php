@@ -32,36 +32,10 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => '',
+		'hostname' => '167.99.208.30',
+		'username' => 'myvizion',
+		'password' => 'tv4bT3Wt',
 		'database' => 'myvizion',
-		'DBDriver' => 'MySQLi',
-		'DBPrefix' => '',
-		'pConnect' => FALSE,
-		'DBDebug'  => (ENVIRONMENT !== 'production'),
-		'charset'  => 'utf8',
-		'DBCollat' => 'utf8_general_ci',
-		'swapPre'  => '',
-		'encrypt'  => false,
-		'compress' => false,
-		'strictOn' => false,
-		'failover' => [],
-		'port'     => 3306,
-	];
-
-	/**
-	 * This database connection is used when
-	 * running PHPUnit database tests.
-	 *
-	 * @var array
-	 */
-	public $test = [
-		'DSN'      => '',
-		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => '',
-		'database' => '',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => FALSE,
