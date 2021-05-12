@@ -65,7 +65,7 @@ class Projects extends BaseController
         }
         else       
         {
-            echo view('site/create');
+            echo view('site/create'); 
         }
     }
 }
