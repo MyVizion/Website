@@ -7,7 +7,7 @@ use CodeIgniter\Controller;
 
 class Pages extends BaseController
 {
-	public function index($page = 'homepage', $slug = false)
+	public function index($page = 'mainpage', $slug = false)
 	{
         $model = new ProjectModel();
 
@@ -18,7 +18,7 @@ class Pages extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
         }
 
-        echo view('site/header');
+        #echo view('site/header');
         echo view('site/'.$page, $data);
          #echo view('template/footer');	
 	}

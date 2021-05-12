@@ -61,7 +61,9 @@ class Projects extends BaseController
                 'image' => $imgdata,
             ]);
 
-            echo view('site/Messages/success');
+            $session = \Config\Services::session();
+            $session->setFlashdata('success', 'New project was created!');
+            return redirect()->to('/');
         }
         else       
         {
