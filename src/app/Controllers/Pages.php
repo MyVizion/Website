@@ -16,6 +16,7 @@ class Pages extends BaseController
         if ( ! is_file(APPPATH.'/Views/site/'.$page.'.php')){
             // Whoops, we don't have a page for that!
             throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
+            
         }
 
         #echo view('site/header');
