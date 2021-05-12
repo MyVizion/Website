@@ -8,7 +8,7 @@
 <nav>
     <!--logo----------------------------->
     <a href="#" class="logo ">
-        <img class = "logo-img" src="/images/logos/logoNoBackGroundRed.png" alt="HOME">
+        <img class = "logo-img" src="/images/logos/logoNobackgroundRed.png" alt="HOME">
     </a>
     <!--menu--------------------------------------->
     <ul class = "navList">
