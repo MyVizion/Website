@@ -1,4 +1,4 @@
-<?= $this->extend('site/mainpage')?>
+<?= $this->extend('site/mainPage')?>
 <?= $this->section('content') ?>
 <main>
 <?php $session = \Config\Services::session();?>
