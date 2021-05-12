@@ -11,16 +11,16 @@ class Pages extends BaseController
 	{
         $model = new ProjectModel();
 
-        $data['projects'] = $model->getProjects($slug);
-
+        $data = ['page' => 'mainpage'];
+        
         if ( ! is_file(APPPATH.'/Views/site/'.$page.'.php')){
             // Whoops, we don't have a page for that!
             throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
-            
+
         }
 
         #echo view('site/header');
         echo view('site/'.$page, $data);
-         #echo view('template/footer');	
+        #echo view('template/footer');	
 	}
 }
