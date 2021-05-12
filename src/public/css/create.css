@@ -72,7 +72,6 @@ body{
     width: 0.1px;
     height: 0.1px;
     position: absolute;
-
 }
 
 .file-input{
@@ -98,7 +97,7 @@ body{
 
 .fileName {
     position: absolute;
-    margin-top: 50px;
+    bottom: -35px;
     left: 10px;
     font-size: 0.85rem;
     color: #555;

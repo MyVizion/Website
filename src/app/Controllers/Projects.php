@@ -45,10 +45,11 @@ class Projects extends BaseController
         if ($this->request->getMethod() === 'post' && $this->validate([
                 'title' => 'required|min_length[3]|max_length[255]',
                 'info'  => 'required',
+                'creator' => 'required',
                 'image' => 'uploaded[image]',
             ]))
         {
-
+            
             $tempfile = $file->getTempName();
             $imgdata = file_get_contents($tempfile);
 
@@ -56,6 +57,7 @@ class Projects extends BaseController
                 'title' => $this->request->getPost('title'),
                 'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
                 'info'  => $this->request->getPost('info'),
+                'creator' => $this->request->getPost('creator'),
                 'image' => $imgdata,
             ]);
 
@@ -63,7 +65,7 @@ class Projects extends BaseController
         }
         else       
         {
-            echo view('site/create');
+            echo view('site/create'); 
         }
     }
 }
