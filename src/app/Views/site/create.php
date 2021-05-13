@@ -7,11 +7,11 @@
                 <h1>Create Project</h1>
                 <?= csrf_field() ?>
                     <!--Title-->
-                    <div class="form-group">
+                    <div class="form-input">
                         <input class="ph-title" type="input" name="title" placeholder="Title" /><br/>
                     </div>
                     <!--Info-->
-                    <div class="form-group">
+                    <div class="form-input">
                         <input class="ph-title" type="input" name="creator" placeholder="Username" /><br/>
                     </div>
                     <!--Username-->

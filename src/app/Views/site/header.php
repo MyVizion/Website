@@ -1,10 +1,3 @@
-<?= $this->extend('site/mainpage')?>
-
-<?= $this->section('header') ?>
-
-<link rel="stylesheet" href="/css/header.css" type="text/css">
-
-<!--navigation--------------------------->
 <nav>
     <!--logo----------------------------->
     <a href="#" class="logo ">
@@ -25,10 +18,7 @@
             <a class="fas fa-envelope Hicon"></a>
             <a class="fas fa-bell Hicon"></a>
         <div> -->
-    
 
     <!--hamburger--------------->
     <div class="toggle"></div>
 </nav>
-
-<?= $this->endSection() ?>

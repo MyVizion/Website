@@ -1,14 +1,15 @@
-<?= $this->extend('site/mainPage')?>
+<?= $this->extend('site/mainpage')?>
+<?= $this->section('header') ?>
+<?= $this->include('site/header') ?> 
+<?= $this->endSection() ?> 
 <?= $this->section('content') ?>
 <main>
 <?php $session = \Config\Services::session();?>
     <?php if (isset($session->success)): ?>
-        <div class="alert aler-success text-center alert-dismissable fade mb-o" role="o">
+        <script>
             <?= $session->success ?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+            swal("Good job!", "You clicked the button!", "success");
+    </script>
     <?php endif; ?>
             <!--search section-------->
             <section class ="wrapperContainer">
@@ -45,6 +46,6 @@
                         <?php echo view('site/overview.php') ?>
                     </div> 
                 </div>
-       
 </main>
 <?= $this->endSection() ?> 
+

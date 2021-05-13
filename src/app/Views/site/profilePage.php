@@ -1,4 +1,4 @@
-<?= $this->extend('/site/mainPage')?>
+<?= $this->extend('/site/mainpage')?>
 
 <?= $this->section('content') ?>
 
