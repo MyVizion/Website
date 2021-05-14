@@ -31,6 +31,5 @@
     </div>
         <!-- Js File -->
         <script src="/js/file.js"></script>
-        
 </main>
 <?= $this->endSection() ?>                                                                                                                                                                                                                                

@@ -47,6 +47,9 @@ $routes->add('site/create', 'Projects::create');
 $routes->get('site/(:segment)', 'Projects::view/$1');
 $routes->get('site', 'Projects::index');
 
+$routes->get('notification', 'MessageController::showSweetAlertMessages');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

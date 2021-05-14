@@ -5,12 +5,7 @@
 <?= $this->section('content') ?>
 <main>
 <?php $session = \Config\Services::session();?>
-    <?php if (isset($session->success)): ?>
-        <script>
-            <?= $session->success ?>
-            swal("Good job!", "You clicked the button!", "success");
-    </script>
-    <?php endif; ?>
+   
             <!--search section-------->
             <section class ="wrapperContainer">
                 <!--container--------->

@@ -62,7 +62,6 @@ class Projects extends BaseController
             ]);
 
             $session = \Config\Services::session();
-            $session->setFlashdata('success', 'New project was created!');
             return redirect()->to('/');
         }
         else       

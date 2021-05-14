@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="/css/style.css" type="text/css" />
         <link rel="stylesheet" href="/css/create.css" type="text/css" />
         <link rel="stylesheet" href="/css/header.css" type="text/css">
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
         <!-- Jquery File -->
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <!-- Js File -->
@@ -28,5 +29,6 @@
 
         <?= $this->renderSection('footer') //voor als we footer hebben ?>
         <!-- footer -->
+
     </body>
 </html>
