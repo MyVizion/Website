@@ -29,7 +29,7 @@
             <input class="create-btn" type="submit" name="submit" value="Create Project"/>
         </form>
     </div>
-        <!-- Js File -->
-        <script src="/js/file.js"></script>
+    <!-- Js File -->
+    <script src="/js/file.js"></script>
 </main>
 <?= $this->endSection() ?>                                                                                                                                                                                                                                

@@ -16,19 +16,19 @@
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/62026585de.js" crossorigin="anonymous"></script>
         <!-- Sweetalert -->
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="sweetalert2.all.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MyVizion</title>
     </head>
     <body>
-        <?= $this->renderSection('header') ?>
         <!-- header -->
-
-        <?= $this->renderSection('content') ?>
+        <?= $this->renderSection('header') ?>
+        
         <!-- content -->
-
-        <?= $this->renderSection('footer') //voor als we footer hebben ?>
+        <?= $this->renderSection('content') ?>
+        
         <!-- footer -->
-
+        <?= $this->renderSection('footer') //voor als we footer hebben ?>
     </body>
 </html>

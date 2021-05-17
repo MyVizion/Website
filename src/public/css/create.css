@@ -4,8 +4,8 @@
     width: 500px;
     max-width: 90%;
     min-height: 100vh;
-    background: #eee;
     display: flex;
+    align-items: center;
     font-family: Nunito;
 }
 

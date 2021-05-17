@@ -10,14 +10,14 @@ class MessageController extends BaseController
 	{
 		// Flash messages settings
 
-		session()->setFlashdata("success", "Project made successfully!");
+		session()->setFlashdata("success", "Task has been completed successfully!");
 
 		session()->setFlashdata("warning", "Warning! this action can not be reversed!");
 
 		session()->setFlashdata("info", "This is information message");
 
-		session()->setFlashdata("error", "Oops! something went wrong!");
+		session()->setFlashdata("error", "Something went wrong!");
 
-		return view("Notifier");
+		return view("site/Messages/Notifier");
 	}
 }
