@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Images/logos/iconDarkRed.png" type="image/x-icon">
         <!-- CSS Files -->
         <link rel="stylesheet" href="/css/style.css" type="text/css" />
@@ -16,9 +17,7 @@
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/62026585de.js" crossorigin="anonymous"></script>
         <!-- Sweetalert -->
-        <script src="sweetalert2.all.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <title>MyVizion</title>
     </head>
     <body>

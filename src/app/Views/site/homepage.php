@@ -5,7 +5,16 @@
 <?= $this->section('content') ?>
 <main>
 <?php $session = \Config\Services::session();?>
-   
+    <!--notifications-->
+    <?php if (isset($session->success)): ?>
+        <div class="success hide">
+            <span class="msg"><?= $session->success ?></span>
+            <span class="close-btn">
+                <span class="fas fa-times"></span>
+            </span>   
+        </div>
+    <?php endif; ?>
+
             <!--search section-------->
             <section class ="wrapperContainer">
                 <!--container--------->

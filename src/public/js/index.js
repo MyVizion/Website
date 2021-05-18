@@ -52,8 +52,13 @@ $(document).ready(function(){
     });
     //hamburger menu
     $('.toggle').click(function(){
-        $('.toggle').toggleClass('active')
-        $('nav').toggleClass('active')
+        $('.toggle').toggleClass('active');
+        $('nav').toggleClass('active');
+    })
+
+    $('.close-btn').click(function(){
+        $('.close-btn').toggleClass('.hide');
+        $('.success').toggleClass('.hide');
     })
 });
 

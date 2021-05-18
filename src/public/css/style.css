@@ -195,7 +195,31 @@ input, button:focus{
     position: absolute;
     top: 210px;
 }
-
+/*notifier*/
+.success{
+    background-color: #15da77;
+    position: relative;
+    padding: 20px 40px;
+    width: 100%;
+    overflow: hidden;
+}
+.success .hide{
+    visibility: visible;
+}
+.succes .msg{
+    padding: 0 20px;
+    font-size: 18px;
+    color: #38855e;
+}
+.success .close-btn{
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px 18px;
+}
+/*responsive mobile*/
 @media (max-width: 600px){
     section{
         height: 200px;

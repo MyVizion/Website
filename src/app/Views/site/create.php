@@ -13,6 +13,9 @@
                     <!--Info-->
                     <div class="form-input">
                         <input class="ph-title" type="input" name="creator" placeholder="Username" /><br/>
+                    <!--Location-->
+                    <div class="form-input">
+                        <input class="ph-title" type="input" name="Location" placeholder="Location" /><br/>
                     </div>
                     <!--Username-->
                     <div class="grow-wrap">
