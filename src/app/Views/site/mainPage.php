@@ -6,11 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Images/logos/iconDarkRed.png" type="image/x-icon">
         <!-- CSS Files -->
+        <link rel="stylesheet" href="/css/header.css" type="text/css">
         <link rel="stylesheet" href="/css/homepage.css" type="text/css" />
         <link rel="stylesheet" href="/css/create.css" type="text/css" />
-        <link rel="stylesheet" href="/css/header.css" type="text/css">
+        <link rel="stylesheet" href="/css/cookies.css" type="text/css">
         <link rel="stylesheet" href="/css/profilepage.css">
-        
+        <link rel="stylesheet" href="/css/footer.css">
         <!-- Jquery File -->
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <!-- Fontawesome -->
@@ -25,11 +26,11 @@
         <?= $this->renderSection('content') ?>
         
         <!-- footer -->
-        <?= $this->renderSection('footer') //voor als we footer hebben ?>
+        <?= $this->renderSection('footer') ?>
 
         <!-- Js File -->
         <script src="/js/searchbar.js"></script>
         <script src="/js/filename.js"></script>
-        <script src="js/darkMode.js"></script>
+        <script src="/js/cookies.js"></script>
     </body>
 </html>

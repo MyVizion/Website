@@ -126,7 +126,9 @@ input, button:focus{
 } 
 
 /*project containers*/
-
+.projects{
+    margin-bottom: 40px;
+}
 .box-container{
     display: grid;
     grid-template-columns: auto auto auto auto;

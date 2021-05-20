@@ -1,13 +1,13 @@
 <!--Cookie popup-------------------------->
-<?= $this->extend('site/mainpage')?>
+<div class="cookie-container">
+    <img src="#" alt="">
+    <div class="terms">
+      <header>Cookies Consent</header>
+      <p>This website use cookies to ensure you get the best experience on our website.</p>
+      <div class="buttons">
+        <button class="item">I understand</button>
+        <a href="#" class="item">Learn more</a>
+      </div>
+    </div>
+  </div>
 
-<?= $this->section('content') ?>
-
-<div id="consent-popup" class="hidden">
-        <p>By using this site you agree to our <a href='#'>Terms and conditions</a>.
-            Please Accept these before using our site &#x1F36A;.
-            <button type="button" id="accept" class="accept-btn">Got it!</button>
-        </p>     
-</div>
-
-<?= $this->endSection() ?>

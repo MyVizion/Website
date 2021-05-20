@@ -48,9 +48,14 @@
                     </div> 
                 </div>
 
-                <script>
-                 
-                </script>
+            <div>
+                <?php echo view('site/cookies.php') ?>
+            </div>
+
+  
 </main>
+<?= $this->endSection() ?> 
+<?= $this->section('footer') ?>
+<?= $this->include('site/footer') ?> 
 <?= $this->endSection() ?> 
 
