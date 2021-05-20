@@ -9,14 +9,12 @@
         <link rel="stylesheet" href="/css/homepage.css" type="text/css" />
         <link rel="stylesheet" href="/css/create.css" type="text/css" />
         <link rel="stylesheet" href="/css/header.css" type="text/css">
-        <link rel="stylesheet" href="css/profilepage.css">
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/profilepage.css">
+        
         <!-- Jquery File -->
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/62026585de.js" crossorigin="anonymous"></script>
-        <!-- Sweetalert -->
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <title>MyVizion</title>
     </head>
     <body>
