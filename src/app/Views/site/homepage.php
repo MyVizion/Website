@@ -7,17 +7,14 @@
 <?php $session = \Config\Services::session();?>
     <!--notifications-->
     <?php if (isset($session->success)): ?>
-        <div class="success hide">
-            <span class="msg"><?= $session->success ?></span>
-            <span class="close-btn">
-                <span class="fas fa-times"></span>
-            </span>   
+        <div class="alert"> 
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Hooray!</strong> Project made successfully!
         </div>
     <?php endif; ?>
-
             <!--search section-------->
             <section class ="wrapperContainer">
-                <!--container--------->
+                <!--container---------> 
                 <div id="container">
                     <!--title--------------------->
                     <h1 class="title">MyVizion</h1>
@@ -50,6 +47,10 @@
                         <?php echo view('site/overview.php') ?>
                     </div> 
                 </div>
+
+                <script>
+                 
+                </script>
 </main>
 <?= $this->endSection() ?> 
 

@@ -13,10 +13,10 @@
                     <!--Info-->
                     <div class="form-input">
                         <input class="ph-title" type="input" name="creator" placeholder="Username" /><br/>
-                    <!--Location-->
+                    <!--Location
                     <div class="form-input">
                         <input class="ph-title" type="input" name="Location" placeholder="Location" /><br/>
-                    </div>
+                    </div>-->
                     <!--Username-->
                     <div class="grow-wrap">
                         <textarea class="ph-info" name="info" placeholder="Type in project info"></textarea>
@@ -32,7 +32,5 @@
             <input class="create-btn" type="submit" name="submit" value="Create Project"/>
         </form>
     </div>
-    <!-- Js File -->
-    <script src="/js/file.js"></script>
 </main>
 <?= $this->endSection() ?>                                                                                                                                                                                                                                

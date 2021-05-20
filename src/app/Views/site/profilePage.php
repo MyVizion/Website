@@ -1,13 +1,8 @@
-<?= $this->extend('/site/mainpage')?>
+<?= $this->extend('site/mainpage')?>
 
 <?= $this->section('content') ?>
 
-<link rel="stylesheet" href="css/profilePage.css">
 <link rel="shortcut icon" href="#" type="image/x-icon">
-<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-<script src="https://kit.fontawesome.com/a8f313f46f.js" crossorigin="anonymous"></script>
-<script src="js/darkMode.js"></script>
-
 
 <main>
     <section id="wrapper" class="container p-5">

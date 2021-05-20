@@ -9,7 +9,6 @@
 body{
     background-color:white;
 }
-
 .wrapperContainer{
     width: 100%;
     height: 450px;
@@ -18,14 +17,12 @@ body{
     background-size: cover;
     position: relative;
 }
-
 #container{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%)
 }
-
 .title{
     color: rgb(255, 255, 255);
     margin-bottom: 10px;
@@ -40,7 +37,6 @@ body{
     padding: 0px;
     box-shadow: 0px 2px 4px 0px rgba(12,18,18,0.4);
 }
-
 .dropdown{
     position: relative;
     width: 150px;
@@ -50,14 +46,12 @@ body{
     border-right: 2px solid #918c8c;
     cursor: pointer;
 }
-
 .default-option{
     font-size: 17px;
     color: black;
     font-weight: 700;
     padding: 13px 0px;
 }
-
 .dropdown-list ul{
     list-style: none;
     background-color: #fff;
@@ -69,7 +63,6 @@ body{
     border-radius: 5px;
     display: none;
 }
-
 .dropdown-list ul.active{
     display: block;
 }
@@ -77,8 +70,6 @@ body{
 .dropdown-list ul li{
     padding: 10px 10px 10px 20px;
 }
-
-
 .dropdown::before{
     content: "";
     border-width: 6px 6px 0px 6px;
@@ -88,7 +79,6 @@ body{
     right: 8px;
     top: 50%;
 }
-
 .dropdown-list ul li::before{
     content: "";
     border-width: 0px 8px 8px 8px;
@@ -98,18 +88,15 @@ body{
     bottom: 100%;
     right: 20px;
 }
-
 .dropdown-list ul li:hover{
     background-color: #fff;
     color: #615d5d;
     font-weight: bold;
 }
-
 .search{
     width: 600px;
     height: 100%;
 }
-
 .search-input{
     width: 100%;
     height: 100%;
@@ -117,7 +104,6 @@ body{
     padding: 0 10px;
     color: #3a3a3a;
 }
-
 .btn{
     background-color: #fff;
     width: 50px;
@@ -125,7 +111,6 @@ body{
     border: 0;
     cursor: pointer;
 }
-
 .btn .fa-search{
     font-size: 20px;
     color: #696966;
@@ -147,7 +132,6 @@ input, button:focus{
     grid-template-columns: auto auto auto auto;
     justify-content: center;
 }
-
 .project-box{
     background-color: black;
     width: 275px;
@@ -161,7 +145,6 @@ input, button:focus{
     flex-direction: column;
     border-radius: 10px;
 }
-
 .bottom-border{
     background-color: white;
     color: black;
@@ -195,31 +178,29 @@ input, button:focus{
     position: absolute;
     top: 210px;
 }
+
 /*notifier*/
-.success{
+.alert {
+    padding: 20px;
     background-color: #15da77;
-    position: relative;
-    padding: 20px 40px;
-    width: 100%;
-    overflow: hidden;
+    color: white;
 }
-.success .hide{
-    visibility: visible;
+.closebtn {
+margin-left: 15px;
+color: white;
+font-weight: bold;
+float: right;
+font-size: 22px;
+line-height: 20px;
+cursor: pointer;
+transition: 0.3s;
 }
-.succes .msg{
-    padding: 0 20px;
-    font-size: 18px;
-    color: #38855e;
+.closebtn:hover {
+    color: black;
 }
-.success .close-btn{
-    cursor: pointer;
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 20px 18px;
-}
+
 /*responsive mobile*/
+
 @media (max-width: 600px){
     section{
         height: 200px;
