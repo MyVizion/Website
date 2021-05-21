@@ -7,4 +7,4 @@
             </div>
         <!--copyright-------------------------------->
         <p class="copyright">&copy; MyVizion</p>
-    </footer>
+</footer>

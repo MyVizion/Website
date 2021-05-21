@@ -1,9 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 :root{
     --borderRadius: 10px;   
     --profileWrapperHeight: 30%;
@@ -24,7 +18,7 @@ a{
     text-decoration: none;   
 }
 
-main{
+.p-main{
     background-color: var(--mainColor);
     color: var(--letterColor);
     height: 90%;

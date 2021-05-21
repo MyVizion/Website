@@ -4,7 +4,7 @@
 
 <link rel="shortcut icon" href="#" type="image/x-icon">
 
-<main>
+<main class="p-main">
     <section id="wrapper" class="container p-5">
         <section class="row">
                 <section class="col middle"> <!-- this the profile section -->
