@@ -6,12 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Images/logos/iconDarkRed.png" type="image/x-icon">
         <!-- CSS Files -->
-        <link rel="stylesheet" href="/css/header.css" type="text/css">
-        <link rel="stylesheet" href="/css/homepage.css" type="text/css" />
-        <link rel="stylesheet" href="/css/create.css" type="text/css" />
-        <link rel="stylesheet" href="/css/cookies.css" type="text/css">
-        <link rel="stylesheet" href="/css/profilepage.css">
-        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="stylesheet" href="/css/homepage.css" />
+        <link rel="stylesheet" href="/css/create.css" />
+        <link rel="stylesheet" href="/css/projectpage.css" />
+        <link rel="stylesheet" href="/css/cookies.css" />
+        <link rel="stylesheet" href="/css/profilepage.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
         <!-- Jquery File -->
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <!-- Fontawesome -->

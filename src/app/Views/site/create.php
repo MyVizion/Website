@@ -13,10 +13,10 @@
                     <!--Info-->
                     <div class="form-input">
                         <input class="ph-title" type="input" name="creator" placeholder="Username" /><br/>
-                    <!--Location
+                    <!--Location-->
                     <div class="form-input">
-                        <input class="ph-title" type="input" name="Location" placeholder="Location" /><br/>
-                    </div>-->
+                        <input class="ph-title" type="input" name="location" placeholder="Location" /><br/>
+                    </div>
                     <!--Username-->
                     <div class="grow-wrap">
                         <textarea class="ph-info" name="info" placeholder="Type in project info"></textarea>

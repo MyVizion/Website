@@ -44,7 +44,7 @@
                 <div class="projects">
                     <!--container------------------------>
                     <div class="box-container">
-                        <?php echo view('site/overview.php') ?>
+                        <?php echo view('site/overview') ?>
                     </div> 
                 </div>
 

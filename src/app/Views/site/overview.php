@@ -2,7 +2,7 @@
 
     <?php foreach ($projects as $project_item): ?>
 
-        <div class="project-box" href="/projects/<?= esc($project_item['slug'], 'url') ?>">
+        <a class="project-box" href="site/projectpage/<?= esc($project_item['slug'], 'url') ?>">
             <?php echo '<img class="project-image" src="data:image/jpeg;base64,'.base64_encode($project_item['image']).'" alt="image" ">'?>
                 <p class="project-name"><?=esc($project_item['title'])?></p>
                 <div class="bottom-border">
@@ -12,7 +12,7 @@
                             <p class="project-views"><i class="far fa-eye"></i>&nbsp;<?=esc($project_item['views'])?></p>
                         </div>
                 </div>
-        </div>
+        </a>
     <?php endforeach; ?> 
 
 <?php else : ?>

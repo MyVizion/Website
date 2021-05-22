@@ -1,0 +1,81 @@
+.heading{
+     background-color: #5fe0a0;
+     height: 5em;
+     color: white;
+     text-align:center;
+     line-height: 4.8em;
+}
+.heading p{
+     font-size: 30px;
+     font-weight: 600;
+}
+.p-title{
+     border-bottom: 2px solid rgb(228, 228, 38) ;
+     height: 13em;
+     text-align:center;
+     line-height: 12em;
+}
+.p-title p{
+     font-size: 60px;
+     font-weight: 500;
+}
+.about{
+     border-bottom: 2px solid rgb(228, 228, 38) ;
+     height: 30em;
+}
+.about-txt{
+     text-align:center;
+     line-height: 4.5em;
+     font-size: 27px;
+     font-weight: 800;
+     color: rgb(97, 93, 93);
+}
+.n-info{
+     border-bottom: 2px solid rgb(228, 228, 38) ;
+     height: 17em;
+}
+.n-container{
+     justify-content: space-evenly;
+     display: flex;
+     color:rgb(97, 93, 93);
+}
+.fa-clock{
+     font-size: 70px;
+}
+.fa-map-marker-alt{
+     font-size: 70px;
+}
+.fa-cogs{
+     font-size: 70px;
+}  
+.needs{
+     text-align:center;
+     line-height: 4.5em;
+     height: 13em;
+}  
+.needs p{
+     font-size: 27px;
+     font-weight: 800;
+     color: rgb(97, 93, 93);
+}
+.needs article{
+     font-size: 20px;
+     font-weight: 600;
+     color: rgb(97, 93, 93);
+}
+.apply-btn{
+     background-color: #5fe0a0;
+     height: 15em;
+     justify-content: center;
+     width: 100%;
+     border: none;
+     color: white;
+     cursor: pointer;
+}
+.apply-btn .fa-plus-circle{
+     font-size: 90px;
+}
+
+.apply-btn p{
+     font-size: 40px;
+}

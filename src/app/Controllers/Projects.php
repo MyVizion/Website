@@ -20,9 +20,7 @@ class Projects extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the project item: '. $slug);
         }
     
-        echo view('site/header');
         echo view('site/overview', $data);
-        #echo view('site/footer', $data);
 	}
 
     public function view($slug = false)
@@ -36,6 +34,17 @@ class Projects extends BaseController
         echo view('site/create', $data);
     }
 
+    public function projectpage_view($slug){
+
+        $model = new ProjectModel();
+
+        $data = [
+            'projects' => $model->getProjects($slug),
+        ];
+
+        echo view('site/projectpage', $data);
+    }
+
     public function create()
     {
         $model = new ProjectModel();
@@ -46,6 +55,7 @@ class Projects extends BaseController
                 'title' => 'required|min_length[3]|max_length[255]',
                 'info'  => 'required',
                 'creator' => 'required',
+                'location' => 'required',
                 'image' => 'uploaded[image]',
             ]))
         {
@@ -58,6 +68,7 @@ class Projects extends BaseController
                 'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
                 'info'  => $this->request->getPost('info'),
                 'creator' => $this->request->getPost('creator'),
+                'location' => $this->request->getPost('location'),
                 'image' => $imgdata,
             ]);
 
@@ -70,4 +81,6 @@ class Projects extends BaseController
             echo view('site/create'); 
         }
     }
+
+ 
 }

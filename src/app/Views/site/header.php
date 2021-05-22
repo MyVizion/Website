@@ -20,5 +20,5 @@
         <div> -->
 
     <!--hamburger--------------->
-    <div class="toggle"></div>
+    <div class="toggle nav-menu"></div>
 </nav>

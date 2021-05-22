@@ -13,7 +13,6 @@ class Pages extends BaseController
 
             $data = [
                 'projects' => $model->getProjects($slug),
-                'content' => $page
             ];
     
             if ( ! is_file(APPPATH.'/Views/site/'.$page.'.php')){
@@ -22,7 +21,6 @@ class Pages extends BaseController
             }
     
             return view('site/'.$page, $data);
-            #echo view('template/footer'); 
         }
 }
  

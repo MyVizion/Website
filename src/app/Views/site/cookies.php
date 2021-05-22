@@ -1,6 +1,5 @@
 <!--Cookie popup-------------------------->
 <div class="cookie-container">
-    <img src="#" alt="">
     <div class="terms">
       <header>Cookies Consent</header>
       <p>This website use cookies to ensure you get the best experience on our website.</p>

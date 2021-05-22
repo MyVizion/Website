@@ -47,6 +47,8 @@ $routes->add('site/create', 'Projects::create');
 $routes->get('site/(:segment)', 'Projects::view/$1');
 $routes->get('site', 'Projects::index');
 
+$routes->get('site/(:any)', 'Projects::projectpage_view/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
