@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <div class="search">
-                            <input type="text" class="search-input" placeholder="Search for your interests">
+                            <input type="text" class="search-input" placeholder="Search for your interests (Not working!)">
                         </div>
                         <button class="btn" type="submit"><i class="fas fa-search"></i></button>
                     </div>

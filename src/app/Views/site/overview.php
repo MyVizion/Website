@@ -20,8 +20,4 @@
          <h3>No Projects</h3> 
          <p>Be the first ever creator of MyVizion!</p>    
     </div>
-<?php endif ?>
-
-
-                    
-                    
+<?php endif; ?>                

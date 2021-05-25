@@ -8,17 +8,30 @@
                 <?= csrf_field() ?>
                     <!--Title-->
                     <div class="form-input">
-                        <input class="ph-title" type="input" name="title" placeholder="Title" /><br/>
-                    </div>
-                    <!--Info-->
-                    <div class="form-input">
-                        <input class="ph-title" type="input" name="creator" placeholder="Username" /><br/>
-                    <!--Location-->
-                    <div class="form-input">
-                        <input class="ph-title" type="input" name="location" placeholder="Location" /><br/>
+                        <input class="ph-title" type="input" name="title" placeholder="Title" />
                     </div>
                     <!--Username-->
+                    <div class="form-input">
+                        <input class="ph-title" type="input" name="creator" placeholder="Username" />
+                    </div>
+                    <!--Location-->
+                    <div class="form-input">
+                        <input class="ph-title" type="input" name="location" placeholder="Location" />
+                    </div>
+                    <!--Time-->
                     <div class="grow-wrap">
+                        <input class="ph-title" type="input" name="time" placeholder="Time" />
+                    </div>
+                    <!--Category-->
+                    <div class="grow-wrap">
+                        <input class="ph-title" type="input" name="category" placeholder="Category" />
+                    </div>
+                    <!--Needs-->
+                    <div class="grow-wrap">
+                        <input class="ph-title" type="input" name="needs" placeholder="Stuff needed" />
+                    </div>
+                    <!--Info-->
+                   <div class="grow-wrap">
                         <textarea class="ph-info" name="info" placeholder="Type in project info"></textarea>
                     </div>
                     <!--File-->

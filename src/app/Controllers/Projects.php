@@ -28,20 +28,21 @@ class Projects extends BaseController
         $model = new ProjectModel();
 
         $data = [
-            'projects' => $model->getProjects(),
+            'projects' => $model->getProjects($slug),
         ];
 
         echo view('site/create', $data);
     }
 
-    public function projectpage_view($slug){
+    public function projectpage_view(){
 
         $model = new ProjectModel();
 
         $data = [
-            'projects' => $model->getProjects($slug),
+            'projects' => $model->getProjects(),
         ];
-
+        var_dump($model->getProjects());
+        
         echo view('site/projectpage', $data);
     }
 
@@ -56,6 +57,9 @@ class Projects extends BaseController
                 'info'  => 'required',
                 'creator' => 'required',
                 'location' => 'required',
+                'time' => 'required',
+                'needs' => 'required',
+                'category' => 'required',
                 'image' => 'uploaded[image]',
             ]))
         {
@@ -69,6 +73,9 @@ class Projects extends BaseController
                 'info'  => $this->request->getPost('info'),
                 'creator' => $this->request->getPost('creator'),
                 'location' => $this->request->getPost('location'),
+                'time' => $this->request->getPost('time'),
+                'needs' => $this->request->getPost('needs'),
+                'category' => $this->request->getPost('category'),
                 'image' => $imgdata,
             ]);
 
@@ -82,5 +89,46 @@ class Projects extends BaseController
         }
     }
 
+    public function save()
+    {
+        $model = new ProjectModel();
+
+        $file = $this->request->getFile('image');
  
+        if ($this->request->getMethod() === 'post' && $this->validate([
+                'title' => 'required|min_length[3]|max_length[255]',
+                'info'  => 'required',
+                'creator' => 'required',
+                'location' => 'required',
+                'time' => 'required',
+                'needs' => 'required',
+                'category' => 'required',
+                'image' => 'uploaded[image]',
+            ]))
+        {
+            
+            $tempfile = $file->getTempName();
+            $imgdata = file_get_contents($tempfile);
+
+            $model->save([
+                'title' => $this->request->getPost('title'),
+                'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
+                'info'  => $this->request->getPost('info'),
+                'creator' => $this->request->getPost('creator'),
+                'location' => $this->request->getPost('location'),
+                'time' => $this->request->getPost('time'),
+                'needs' => $this->request->getPost('needs'),
+                'category' => $this->request->getPost('category'),
+                'image' => $imgdata,
+            ]);
+
+            $session = \Config\Services::session();
+            $session->setFlashdata('success', 'Project made successfully!');
+            return redirect()->to('/');
+        }
+        else       
+        {
+            echo view('site/create'); 
+        }
+    }
 }

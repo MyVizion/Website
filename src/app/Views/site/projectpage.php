@@ -4,6 +4,7 @@
 <?= $this->endSection() ?> 
 <?= $this->section('content') ?>
 <body>
+<?php if (! empty($projects) && is_array($projects)) : ?>
      <!-- project heading -->
      <div class="heading">
           <p>Open Project</p>
@@ -28,20 +29,30 @@
                <p>Project Infos:</p>
           </div>
           <div class="n-container">
-               <p><i class="fas fa-clock"></i></p>
-               <p><i class="fas fa-map-marker-alt"></i><?=esc($project_item['location'])?></p>
-               <p><i class="fas fa-cogs"></i></p>
+               <div class="item-box">
+                    <i class="fas fa-clock"></i>
+                    <p><?=esc($project_item['time'])?>Time</p>
+               </div>
+               <div class="item-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><?=esc($project_item['location'])?>Location</p>
+               </div>
+               <div class="item-box">
+                    <i class="fas fa-cogs"></i>
+                    <p><?=esc($project_item['category'])?>Stuff</p>
+               </div>
           </div>
      </div>
      <!-- Needs -->
      <div class="needs">
           <p>Needs:</p>
-          <article>Stuff</article>
+          <article><?=esc($project_item['needs'])?>Stuff</article>
      </div>
      <!-- Apply button -->
      <button class="apply-btn">
           <i class="fas fa-plus-circle"></i>
           <p>Apply to join</p>
-     </button>
+     </button> b 
+<?php endif; ?>
 </body>
 <?= $this->endSection() ?> 

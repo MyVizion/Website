@@ -39,6 +39,15 @@
      display: flex;
      color:rgb(97, 93, 93);
 }
+.item-box{
+     display: grid;
+     text-align: center;
+}
+.item-box p{
+     margin-top: 10px;
+     font-size: 20px;
+     font-weight: 500;
+}
 .fa-clock{
      font-size: 70px;
 }
@@ -75,7 +84,6 @@
 .apply-btn .fa-plus-circle{
      font-size: 90px;
 }
-
 .apply-btn p{
      font-size: 40px;
 }

@@ -38,14 +38,15 @@ $routes->get('/', 'Pages::index');
 $routes->add('(:segment)', 'Profile::index/$1');
 $routes->add('(:any)/change', 'Profile::ChangeProfile');
 
-$routes->get('site/(:segment)', 'Projects::view/$1');
-$routes->get('site', 'Projects::index');
+
 // $routes->get('(:any)', 'Pages::index/$1');
 
-$routes->match(['get', 'post'], 'site/create', 'Projects::create');
-$routes->add('site/create', 'Projects::create');
-$routes->get('site/(:segment)', 'Projects::view/$1');
-$routes->get('site', 'Projects::index');
+//CRUD 
+$routes->get('projects', 'Projects::index');
+$routes->post('projects/create', 'Projects::save');
+$routes->get('projects/create', 'Projects::create');
+$routes->get('projects/create/(:num)', 'Projects::edit/$1');
+$routes->get('projects/delete/(:num)', 'Projects::delete/$1');
 
 $routes->get('site/(:any)', 'Projects::projectpage_view/$1');
 
