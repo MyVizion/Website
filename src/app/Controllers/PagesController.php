@@ -7,12 +7,12 @@ use CodeIgniter\Controller;
 
 class PagesController extends BaseController
 {       
-        public function index($page = 'homepage', $id = false)
+        public function index($page = 'homepage')
         {
             $model = new ProjectModel();
 
             $data = [
-                'projects' => $model->getProjects($id),
+                'projects' => $model->getProjects(),
             ];
     
             if ( ! is_file(APPPATH.'/Views/site/'.$page.'.php')){

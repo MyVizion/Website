@@ -7,7 +7,7 @@ use CodeIgniter\Controller;
 
 class ProjectsController extends BaseController
 {
-    public function index()
+    public function index()  
 	{
         $model = new ProjectModel();
 
@@ -44,7 +44,7 @@ class ProjectsController extends BaseController
         
         echo view('projects/projectpage', $data);
     }
-
+    
     public function create()
     {
         echo view('projects/create'); 

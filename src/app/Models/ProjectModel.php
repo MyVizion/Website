@@ -17,7 +17,7 @@ class ProjectModel extends Model
         {
             return $this->findAll();
         }
-
+ 
         return $this->find($id)
                     ->get();
     }
