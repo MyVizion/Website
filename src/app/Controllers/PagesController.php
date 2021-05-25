@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\ProjectModel;
 use CodeIgniter\Controller;
 
-class Pages extends BaseController
+class PagesController extends BaseController
 {       
         public function index($page = 'homepage', $id = false)
         {

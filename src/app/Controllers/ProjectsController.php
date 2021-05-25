@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\ProjectModel;
 use CodeIgniter\Controller;
 
-class Projects extends BaseController
+class ProjectsController extends BaseController
 {
     public function index()
 	{
@@ -34,14 +34,13 @@ class Projects extends BaseController
         echo view('projects/create', $data);
     }
 
-    public function projectpage_view(){
+    public function projectpage_view($id){
 
         $model = new ProjectModel();
 
         $data = [
-            'projects' => $model->getProjects(),
+            'projects' => $model->getProjects($id),
         ];
-        var_dump($model->getProjects());
         
         echo view('projects/projectpage', $data);
     }

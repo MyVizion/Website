@@ -52,7 +52,7 @@
      <button class="apply-btn">
           <i class="fas fa-plus-circle"></i>
           <p>Apply to join</p>
-     </button> b 
+     </button> 
 <?php endif; ?>
 </body>
 <?= $this->endSection() ?> 
