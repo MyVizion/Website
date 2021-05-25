@@ -1,6 +1,6 @@
 <?= $this->extend('site/mainpage')?>
 <?= $this->section('header') ?>
-<?= $this->include('site/header') ?> 
+<?= $this->include('templates/header') ?> 
 <?= $this->endSection() ?> 
 <?= $this->section('content') ?>
 <body>

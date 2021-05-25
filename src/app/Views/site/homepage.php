@@ -1,6 +1,6 @@
 <?= $this->extend('site/mainpage')?>
 <?= $this->section('header') ?>
-<?= $this->include('site/header') ?> 
+<?= $this->include('templates/header') ?> 
 <?= $this->endSection() ?> 
 <?= $this->section('content') ?>
 <main>
@@ -44,18 +44,18 @@
                 <div class="projects">
                     <!--container------------------------>
                     <div class="box-container">
-                        <?php echo view('site/overview') ?>
+                        <?php echo view('projects/list') ?>
                     </div> 
                 </div>
 
             <div>
-                <?php echo view('site/cookies.php') ?>
+                <?php echo view('templates/cookies.php') ?>
             </div>
 
   
 </main>
 <?= $this->endSection() ?> 
 <?= $this->section('footer') ?>
-<?= $this->include('site/footer') ?> 
+<?= $this->include('templates/footer') ?> 
 <?= $this->endSection() ?> 
 

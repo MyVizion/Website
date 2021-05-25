@@ -18,7 +18,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Pages');
+$routes->setDefaultController('PagesController');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -33,22 +33,19 @@ $routes->setAutoRoute(false);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
-$routes->get('/', 'Pages::index');
+$routes->get('/', 'PagesController::index');
 
-$routes->add('(:segment)', 'Profile::index/$1');
-$routes->add('(:any)/change', 'Profile::ChangeProfile');
-
-
-// $routes->get('(:any)', 'Pages::index/$1');
+$routes->add('(:segment)', 'ProfileController::index/$1');
+$routes->add('(:any)/change', 'ProfileController::ChangeProfile');
 
 //CRUD 
-$routes->get('projects', 'Projects::index');
-$routes->post('projects/create', 'Projects::save');
-$routes->get('projects/create', 'Projects::create');
-$routes->get('projects/create/(:num)', 'Projects::edit/$1');
-$routes->get('projects/delete/(:num)', 'Projects::delete/$1');
+$routes->get('projects', 'ProjectsController::index');
+$routes->post('projects/create', 'ProjectsController::save');
+$routes->get('projects/create', 'ProjectsController::create');
+$routes->get('projects/create/(:num)', 'ProjectsController::edit/$1');
+$routes->get('projects/delete/(:num)', 'ProjectsController::delete/$1');
 
-$routes->get('site/(:any)', 'Projects::projectpage_view/$1');
+$routes->get('site/(:any)', 'ProjectsController::projectpage_view/$1');
 
 /*
  * --------------------------------------------------------------------
