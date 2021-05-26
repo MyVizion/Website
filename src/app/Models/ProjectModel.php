@@ -18,7 +18,6 @@ class ProjectModel extends Model
             return $this->findAll();
         }
  
-        return $this->find($id)
-                    ->get();
+        return $this->find($id);
     }
 }

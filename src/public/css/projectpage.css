@@ -21,7 +21,7 @@
 }
 .about{
      border-bottom: 2px solid rgb(228, 228, 38) ;
-     height: 30em;
+     min-height: 30em;
 }
 .about-txt{
      text-align:center;
@@ -29,6 +29,23 @@
      font-size: 27px;
      font-weight: 800;
      color: rgb(97, 93, 93);
+}
+.p-container{
+     display: flex;
+     justify-content: space-between;
+}
+.p-image{
+     position: absolute;
+     left: 350px;
+     border-radius: 6px;
+     max-width: 400px;
+     max-height: 400px;
+}
+.info-container article{
+     position: absolute;
+     left: 750px;
+     max-width: 600px;
+     max-height: 600px;
 }
 .n-info{
      border-bottom: 2px solid rgb(228, 228, 38) ;
@@ -87,3 +104,21 @@
 .apply-btn p{
      font-size: 40px;
 }
+
+
+@media (max-width: 600px){
+
+ }
+ 
+ @media only screen and (min-width: 600px) 
+     and (max-width: 700px){
+
+ }
+ 
+ @media only screen and (min-width: 600px) {
+
+ }
+ 
+ @media only screen and (min-width: 1200px) {
+
+ }

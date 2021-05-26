@@ -45,7 +45,7 @@ $routes->get('projects/create', 'ProjectsController::create');
 $routes->get('projects/create/(:num)', 'ProjectsController::edit/$1');
 $routes->get('projects/delete/(:num)', 'ProjectsController::delete/$1');
 
-$routes->get('site/(:any)', 'ProjectsController::projectpage_view/$1');
+//$routes->get('projects/(:any)', 'ProjectsController::projectpage_view/$1');
 
 /*
  * --------------------------------------------------------------------

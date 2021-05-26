@@ -2,7 +2,7 @@
 
     <?php foreach ($projects as $project_item): ?>
 
-        <a class="project-box" href="site/projectpage/<?= esc($project_item['slug/id'], 'url') ?>">
+        <a class="project-box" href="projects/create/<?= esc($project_item['id'], 'url') ?>">
             <?php echo '<img class="project-image" src="data:image/jpeg;base64,'.base64_encode($project_item['image']).'" alt="image" ">'?>
                 <p class="project-name"><?=esc($project_item['title'])?></p>
                 <div class="bottom-border">

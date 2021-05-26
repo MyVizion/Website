@@ -1,58 +1,65 @@
 <?= $this->extend('site/mainpage')?>
-<?= $this->section('header') ?>
-<?= $this->include('templates/header') ?> 
-<?= $this->endSection() ?> 
+     <?= $this->section('header') ?>
+          <?= $this->include('templates/header') ?> 
+     <?= $this->endSection() ?> 
 <?= $this->section('content') ?>
-<body>
-<?php if (! empty($projects) && is_array($projects)) : ?>
-     <!-- project heading -->
-     <div class="heading">
-          <p>Open Project</p>
-     </div>
-     <!-- Title -->
-     <div class="p-title">
-          <p><?=esc($project_item['title'])?>Title</p>
-     </div>
-     <!-- About -->
-     <div class="about">
-          <div class="about-txt">
-               <p>About us</p>
+     <?php if (empty($projects)) : ?>
+          <p>No Data Found!</p>
+          <?php else: ?>
+          <!------------------------------------ project heading -->
+          <div class="heading">
+               <p>Open Project</p>
           </div>
-          <div class="info-container">
-               <?php echo '<img class="p-image" src="data:image/jpeg;base64,'.base64_encode($project_item['image']).'" alt="image" ">'?>
-               <article><?=esc($project_item['info'])?></article>
+          <!---------------------------------------------- Title -->
+          <div class="p-title">
+               <p><?=esc($projects['title'])?></p>
           </div>
-     </div>
-     <!-- Project info -->
-     <div class="n-info">
-          <div class="about-txt">
-               <p>Project Infos:</p>
-          </div>
-          <div class="n-container">
-               <div class="item-box">
-                    <i class="fas fa-clock"></i>
-                    <p><?=esc($project_item['time'])?>Time</p>
+          <!---------------------------------------------- About -->
+          <div class="about">
+               <div class="about-txt">
+                    <p>About us</p>
                </div>
-               <div class="item-box">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p><?=esc($project_item['location'])?>Location</p>
-               </div>
-               <div class="item-box">
-                    <i class="fas fa-cogs"></i>
-                    <p><?=esc($project_item['category'])?>Stuff</p>
+               <div class="p-container">
+                    <div class="p-image">
+                         <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($projects['image']).'" alt="image" ">'?>
+                    </div>
+                    <div class="p-info">
+                         <article><?=esc($projects['info'])?></article>
+                    </div>
                </div>
           </div>
-     </div>
-     <!-- Needs -->
-     <div class="needs">
+          <!--------------------------------------- Project info -->
+          <div class="n-info">
+               <div class="about-txt">
+                    <p>Project Infos:</p>
+               </div>
+               <div class="n-container">
+                    <!---------------------------------- Date and time -->
+                    <div class="item-box">
+                         <i class="fas fa-clock"></i>
+                         <p><?=esc($projects['time'])?></p>
+                    </div>
+                    <!---------------------------------- Location -->
+                    <div class="item-box">
+                         <i class="fas fa-map-marker-alt"></i>
+                         <p><?=esc($projects['location'])?></p>
+                    </div>
+                    <!---------------------------------- Category -->
+                    <div class="item-box">
+                         <i class="fas fa-cogs"></i>
+                         <p><?=esc($projects['category'])?></p>
+                    </div>
+               </div>
+          </div>
+          <!------------------------------------------- Needs -->
+          <div class="needs">
           <p>Needs:</p>
-          <article><?=esc($project_item['needs'])?>Stuff</article>
-     </div>
-     <!-- Apply button -->
-     <button class="apply-btn">
+          <article><?=esc($project_item['needs'])?></article>
+          </div>
+          <!------------------------------------ Apply button -->
+          <button class="apply-btn">
           <i class="fas fa-plus-circle"></i>
           <p>Apply to join</p>
-     </button> 
-<?php endif; ?>
-</body>
+          </button>
+     <?php endif; ?>
 <?= $this->endSection() ?> 

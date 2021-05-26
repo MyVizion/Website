@@ -3,12 +3,12 @@
 <main>
     <div class="parent">
     <?= \Config\Services::validation()->listErrors() ?>
-        <form action="/site/create" method="post" enctype="multipart/form-data">
+        <form action="/projects/create" method="post" enctype="multipart/form-data">
                 <h1>Create Project</h1>
                 <?= csrf_field() ?>
                     <!--Title-->
                     <div class="form-input">
-                        <input class="ph-title" type="input" name="title" placeholder="Title" />
+                        <input class="ph-title" type="input" name="title" placeholder="Title" value="<?= ($data) ?'pietjepuk': ''; ?>" />
                     </div>
                     <!--Username-->
                     <div class="form-input">

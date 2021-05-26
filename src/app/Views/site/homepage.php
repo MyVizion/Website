@@ -49,7 +49,8 @@
                 </div>
 
             <div>
-                <?php echo view('templates/cookies.php') ?>
+                <!-- niet nodig tijdens testfase -->
+                <?php //echo view('templates/cookies.php') ?> 
             </div>
 
   

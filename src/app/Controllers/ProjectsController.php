@@ -34,7 +34,7 @@ class ProjectsController extends BaseController
         echo view('projects/create', $data);
     }
 
-    public function projectpage_view($id){
+    public function edit($id){
 
         $model = new ProjectModel();
 
@@ -57,8 +57,8 @@ class ProjectsController extends BaseController
         $file = $this->request->getFile('image');
  
         if ($this->request->getMethod() === 'post' && $this->validate([
-                'title' => 'required|min_length[3]|max_length[255]',
-                'info'  => 'required',
+                'title' => 'required|min_length[3]|max_length[30]',
+                'info'  => 'required|min_length[3]|max_length[1000]',
                 'creator' => 'required',
                 'location' => 'required',
                 'time' => 'required',
@@ -84,7 +84,7 @@ class ProjectsController extends BaseController
             ]);
 
             $session = \Config\Services::session();
-            $session->setFlashdata('success', 'Project made successfully!');
+            $session->setFlashdata('success', '1,Project made successfully!');
             return redirect()->to('/');
         }
         else       
