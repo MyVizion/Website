@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\ProjectModel;
 use CodeIgniter\Controller;
 
+/* This controller handles the main pages */
+
 class PagesController extends BaseController
 {       
         public function index($page = 'homepage')
@@ -14,12 +16,13 @@ class PagesController extends BaseController
             $data = [
                 'projects' => $model->getProjects(),
             ];
-    
+            
+            // If page does not exist
             if ( ! is_file(APPPATH.'/Views/site/'.$page.'.php')){
-                // Whoops, we don't have a page for that!
+                // Throw 404 error
                 throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
             }
-    
+
             return view('site/'.$page, $data);
         }
 }

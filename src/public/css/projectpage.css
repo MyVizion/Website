@@ -5,10 +5,12 @@
      text-align:center;
      line-height: 4.8em;
 }
+/* Page Head */
 .heading p{
      font-size: 30px;
      font-weight: 600;
 }
+/* Project Title */
 .p-title{
      border-bottom: 2px solid rgb(228, 228, 38) ;
      height: 13em;
@@ -19,31 +21,30 @@
      font-size: 60px;
      font-weight: 500;
 }
+/* About Container */
 .about{
      border-bottom: 2px solid rgb(228, 228, 38) ;
      min-height: 30em;
 }
-.about-txt{
+/* About Title */
+.about-title{
      text-align:center;
      line-height: 4.5em;
      font-size: 27px;
      font-weight: 800;
      color: rgb(97, 93, 93);
 }
-.p-container{
-     display: flex;
-     justify-content: space-between;
+.info-container{
+     display: grid;
+     justify-content: space-evenly;
+     grid-template-columns: auto auto;
 }
 .p-image{
-     position: absolute;
-     left: 350px;
      border-radius: 6px;
      max-width: 400px;
      max-height: 400px;
 }
-.info-container article{
-     position: absolute;
-     left: 750px;
+.p-info{
      max-width: 600px;
      max-height: 600px;
 }

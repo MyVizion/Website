@@ -34,6 +34,7 @@ class ProjectsController extends BaseController
         echo view('projects/create', $data);
     }
 
+    // Edit fucntion
     public function edit($id){
 
         $model = new ProjectModel();
@@ -45,11 +46,13 @@ class ProjectsController extends BaseController
         echo view('projects/projectpage', $data);
     }
     
+    // Create Function
     public function create()
     {
         echo view('projects/create'); 
     }
 
+    // Save Function
     public function save()
     {
         $model = new ProjectModel();

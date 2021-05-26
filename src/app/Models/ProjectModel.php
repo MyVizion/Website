@@ -6,8 +6,10 @@ use CodeIgniter\Model;
 
 class ProjectModel extends Model
 {
+    //Database Table Name
     protected $table = 'projects';
 
+    //Allowed Database Fields
     protected $allowedFields = ['title', 'slug', 'info', 'image', 
                                 'creator', 'location', 'time', 'needs', 'category'];
 

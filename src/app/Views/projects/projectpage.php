@@ -3,38 +3,45 @@
           <?= $this->include('templates/header') ?> 
      <?= $this->endSection() ?> 
 <?= $this->section('content') ?>
+     <!--------------------------------- if project data is empty: -->
      <?php if (empty($projects)) : ?>
+          <!---------------------------------------------- Display -->
           <p>No Data Found!</p>
+          <!------------------------------------------------- Else -->
           <?php else: ?>
-          <!------------------------------------ project heading -->
+          <!----------------------------------------- Display Page -->
+
+          <!-------------------------------------- project heading -->
           <div class="heading">
                <p>Open Project</p>
           </div>
-          <!---------------------------------------------- Title -->
+          <!------------------------------------------------ Title -->
           <div class="p-title">
                <p><?=esc($projects['title'])?></p>
           </div>
-          <!---------------------------------------------- About -->
+          <!------------------------------------------------ About -->
           <div class="about">
-               <div class="about-txt">
+               <div class="about-title">
                     <p>About us</p>
                </div>
-               <div class="p-container">
-                    <div class="p-image">
-                         <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($projects['image']).'" alt="image" ">'?>
+               <!----------------------------------- Project Image -->
+               <div class="info-container">
+                    <div>
+                         <?php echo '<img class="p-image" src="data:image/jpeg;base64,'.
+                               base64_encode($projects['image']).'" alt="image" ">'?>
                     </div>
                     <div class="p-info">
                          <article><?=esc($projects['info'])?></article>
                     </div>
                </div>
           </div>
-          <!--------------------------------------- Project info -->
+          <!----------------------------------------- Project info -->
           <div class="n-info">
-               <div class="about-txt">
+               <div class="about-title">
                     <p>Project Infos:</p>
                </div>
                <div class="n-container">
-                    <!---------------------------------- Date and time -->
+                    <!------------------------------ Date and time -->
                     <div class="item-box">
                          <i class="fas fa-clock"></i>
                          <p><?=esc($projects['time'])?></p>
@@ -51,15 +58,16 @@
                     </div>
                </div>
           </div>
-          <!------------------------------------------- Needs -->
+          <!----------------------------------------------- Needs -->
           <div class="needs">
-          <p>Needs:</p>
-          <article><?=esc($project_item['needs'])?></article>
+               <p>Needs:</p>
+               <article><?=esc($project_item['needs'])?></article>
           </div>
-          <!------------------------------------ Apply button -->
+          <!---------------------------------------- Apply button -->
           <button class="apply-btn">
-          <i class="fas fa-plus-circle"></i>
-          <p>Apply to join</p>
+                <i class="fas fa-plus-circle"></i>
+                <p>Apply to join</p>
           </button>
+
      <?php endif; ?>
 <?= $this->endSection() ?> 

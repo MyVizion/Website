@@ -1,6 +1,5 @@
 <?= $this->extend('site/mainpage')?>
 <?= $this->section('content') ?>
-<main>
     <div class="parent">
     <?= \Config\Services::validation()->listErrors() ?>
         <form action="/projects/create" method="post" enctype="multipart/form-data">
@@ -31,7 +30,7 @@
                         <input class="ph-title" type="input" name="needs" placeholder="Stuff needed" />
                     </div>
                     <!--Info-->
-                   <div class="grow-wrap">
+                    <div class="grow-wrap">
                         <textarea class="ph-info" name="info" placeholder="Type in project info"></textarea>
                     </div>
                     <!--File-->
@@ -45,5 +44,4 @@
             <input class="create-btn" type="submit" name="submit" value="Create Project"/>
         </form>
     </div>
-</main>
 <?= $this->endSection() ?>                                                                                                                                                                                                                                

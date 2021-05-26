@@ -3,7 +3,6 @@
 <?= $this->include('templates/header') ?> 
 <?= $this->endSection() ?> 
 <?= $this->section('content') ?>
-<main>
 <?php $session = \Config\Services::session();?>
     <!--notifications-->
     <?php if (isset($session->success)): ?>
@@ -53,8 +52,6 @@
                 <?php //echo view('templates/cookies.php') ?> 
             </div>
 
-  
-</main>
 <?= $this->endSection() ?> 
 <?= $this->section('footer') ?>
 <?= $this->include('templates/footer') ?> 

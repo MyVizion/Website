@@ -20,14 +20,20 @@
         <title>MyVizion</title>
     </head>
     <body>
-        <!-- header -->
-        <?= $this->renderSection('header') ?>
+        <!------------------------ header -->
+        <nav>
+            <?= $this->renderSection('header') ?>
+        </nav>
         
-        <!-- content -->
-        <?= $this->renderSection('content') ?>
+        <!----------------------- content -->
+        <main>
+            <?= $this->renderSection('content') ?>
+        </main>
         
-        <!-- footer -->
-        <?= $this->renderSection('footer') ?>
+        <!------------------------ footer -->
+        <footer>
+            <?= $this->renderSection('footer') ?>
+        </footer>
 
         <!-- Js File -->
         <script src="/js/searchbar.js"></script>
