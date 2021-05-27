@@ -64,6 +64,10 @@
                 <i class="fas fa-plus-circle"></i>
                 <p>Apply to join</p>
           </button>
-
+     <script>
+     $(function() {
+          $("footer").hide();
+     });
+     </script>
      <?php endif; ?>
 <?= $this->endSection() ?> 

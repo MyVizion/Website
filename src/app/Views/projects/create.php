@@ -44,4 +44,10 @@
             <input class="create-btn" type="submit" name="submit" value="Create Project"/>
         </form>
     </div>
+
+    <script>
+     $(function() {
+          $("footer").hide();
+     });
+     </script>
 <?= $this->endSection() ?>                                                                                                                                                                                                                                
