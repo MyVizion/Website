@@ -20,19 +20,15 @@
                <p><?=esc($projects['title'])?></p>
           </div>
           <!------------------------------------------------ About -->
-          <div class="about">
+          <div class="about-container">
                <div class="about-title">
                     <p>About us</p>
                </div>
                <!----------------------------------- Project Image -->
                <div class="info-container">
-                    <div>
                          <?php echo '<img class="p-image" src="data:image/jpeg;base64,'.
-                               base64_encode($projects['image']).'" alt="image" ">'?>
-                    </div>
-                    <div class="p-info">
-                         <article><?=esc($projects['info'])?></article>
-                    </div>
+                               base64_encode($projects['image']).'" alt="image" ">'?> 
+                         <article class="p-info"><?=esc($projects['info'])?></article>
                </div>
           </div>
           <!----------------------------------------- Project info -->
@@ -61,7 +57,7 @@
           <!----------------------------------------------- Needs -->
           <div class="needs">
                <p>Needs:</p>
-               <article><?=esc($project_item['needs'])?></article>
+               <article><?=esc($projects['needs'])?></article>
           </div>
           <!---------------------------------------- Apply button -->
           <button class="apply-btn">

@@ -34,7 +34,7 @@ class ProjectsController extends BaseController
         echo view('projects/create', $data);
     }
 
-    // Edit fucntion
+    // Edit function
     public function edit($id){
 
         $model = new ProjectModel();

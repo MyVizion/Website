@@ -41,7 +41,7 @@ $routes->add('(:any)/change', 'ProfileController::ChangeProfile');
 //CRUD 
 $routes->get('projects', 'ProjectsController::index');
 $routes->post('projects/create', 'ProjectsController::save');
-$routes->get('projects/create', 'ProjectsController::create');
+$routes->get('projects/create', 'ProjectsController::create', ['as' => 'create_page']);
 $routes->get('projects/create/(:num)', 'ProjectsController::edit/$1');
 $routes->get('projects/delete/(:num)', 'ProjectsController::delete/$1');
 
