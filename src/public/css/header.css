@@ -3,19 +3,8 @@
 *{
   box-sizing: border-box;
 }
-
 :root{
   --buttonHeight: 22%;
-}
-
-ul{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-a{
-  text-decoration: none;
 }
 nav{
   font-family: nunito;
@@ -25,12 +14,21 @@ nav{
   height: 80px;
   width: 100%;
   background-color: #ffffff;
-  box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
-  padding: 0 2%;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-right: 700px;
+}
+a{
+  text-decoration: none;
 }
 .logo-img{
-  height: 100px;
+  height: 80px;
   width: auto; 
+  left: 0px;
 }
 nav ul{
   display: flex;
@@ -45,7 +43,7 @@ nav a.active{
   border-bottom: 3px solid black;
 }
 .btn-container{
-  margin-left: 450px;
+  margin-right: 5px;
 }
 .joinButton{
   border: none;
@@ -70,64 +68,65 @@ nav a.active{
 .Hbtn:hover{
   transform: scale(1.1);
 }
-
 .Hicon{
   margin-left: 7px;
   font-size: 20px;
 }
-
+.nav-menu{
+  margin-right: 12px;
+}
 @media screen and (max-width: 1024px){
-nav ul{
-  margin: 0px;
-  padding: 0px;
-  background-color: #ffffff;
-  flex-direction: column;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  display: none;
-}
-nav ul li{
-  padding: 10px;
-}
-nav ul li .nav-link{
-  font-size: 1.4em;
-  text-transform: uppercase;
-  color: rgb(0, 0, 0);
-}
-nav ul li .nav-link:hover{
-  color: #121212;
-}
-.btn-container{
-    margin-left: 0px;
-}
-.toggle:before{
-  content: '\f0c9';
-  font-family: fontAwesome;
-  line-height: 30px;
-  z-index: 1;
-}
-.toggle.active:before{
-  content: '\f00d';
-  position: fixed;
-  line-height: 0px;
-}
-nav.active ul{
-  display: flex !important;
-}
+  nav ul{
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    display: none;
+  }
+  nav ul li{
+    padding: 10px;
+  }
+  nav ul li .nav-link{
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+  }
+  nav ul li .nav-link:hover{
+    color: #121212;
+  }
+  .toggle:before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    line-height: 30px;
+    z-index: 1;
+  }
+  .toggle.active:before{
+    content: '\f00d';
+    position: fixed;
+    line-height: 0px;
+  }
+  nav.active ul{
+    display: flex !important;
+  }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1366px){
-.btn-container{
-  margin-left: 300px;
-}
+@media screen and (min-width: 1025px) and (max-width: 1367px){
+  .btn-container{
+    margin-left: 300px;
+  }
+  ul{
+    margin-right: 500px;
+  }
 }
 
 

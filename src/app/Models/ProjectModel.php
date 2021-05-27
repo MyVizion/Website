@@ -6,19 +6,20 @@ use CodeIgniter\Model;
 
 class ProjectModel extends Model
 {
+    //Database Table Name
     protected $table = 'projects';
 
-    protected $allowedFields = ['title', 'slug', 'info', 'image', 'creator'];
+    //Allowed Database Fields
+    protected $allowedFields = ['title', 'slug', 'info', 'image', 
+                                'creator', 'location', 'time', 'needs', 'category'];
 
-    public function getProjects($slug = false)
+    public function getProjects($id = false)
     {
-        if ($slug === false)
+        if ($id === false)
         {
             return $this->findAll();
         }
-
-        return $this->asArray()
-                ->where(['slug' => $slug])
-                ->first();
+ 
+        return $this->find($id);
     }
 }

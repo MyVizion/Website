@@ -1,19 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    min-height: 100vh;
-    background: #eee;
-    display: flex;
-    font-family: Nunito;
-}
 .parent{
     margin: auto;
     width: 500px;
     max-width: 90%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: Nunito;
 }
 
 .parent form{
@@ -117,4 +110,14 @@ body{
     font-size: 14px;
     color: white;
     border-radius: 4px;
+}
+.success{
+    background-color: #738f73;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    font-weight:600;
 }

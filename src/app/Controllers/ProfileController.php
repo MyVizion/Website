@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\models\UserModel;
 
-class Profile extends \CodeIgniter\Controller
+class ProfileController extends \CodeIgniter\Controller
 {
 	
 

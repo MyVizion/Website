@@ -5,9 +5,9 @@ namespace App\Controllers;
 use App\Models\ProjectModel;
 use CodeIgniter\Controller;
 
-class Projects extends BaseController
+class ProjectsController extends BaseController
 {
-    public function index()
+    public function index()  
 	{
         $model = new ProjectModel();
 
@@ -20,12 +20,10 @@ class Projects extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the project item: '. $slug);
         }
     
-        echo view('site/header');
-        echo view('site/overview', $data);
-        #echo view('site/footer', $data);
+        echo view('projects/overview', $data);
 	}
 
-    public function view($slug = false)
+    public function view()
     {
         $model = new ProjectModel();
 
@@ -33,19 +31,42 @@ class Projects extends BaseController
             'projects' => $model->getProjects(),
         ];
 
-        echo view('site/create', $data);
+        echo view('projects/create', $data);
     }
 
+    // Edit function
+    public function edit($id){
+
+        $model = new ProjectModel();
+
+        $data = [
+            'projects' => $model->getProjects($id),
+        ];
+        
+        echo view('projects/projectpage', $data);
+    }
+    
+    // Create Function
     public function create()
+    {
+        echo view('projects/create'); 
+    }
+
+    // Save Function
+    public function save()
     {
         $model = new ProjectModel();
 
         $file = $this->request->getFile('image');
  
         if ($this->request->getMethod() === 'post' && $this->validate([
-                'title' => 'required|min_length[3]|max_length[255]',
-                'info'  => 'required',
+                'title' => 'required|min_length[3]|max_length[30]',
+                'info'  => 'required|min_length[3]|max_length[1000]',
                 'creator' => 'required',
+                'location' => 'required',
+                'time' => 'required',
+                'needs' => 'required',
+                'category' => 'required',
                 'image' => 'uploaded[image]',
             ]))
         {
@@ -58,14 +79,20 @@ class Projects extends BaseController
                 'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
                 'info'  => $this->request->getPost('info'),
                 'creator' => $this->request->getPost('creator'),
+                'location' => $this->request->getPost('location'),
+                'time' => $this->request->getPost('time'),
+                'needs' => $this->request->getPost('needs'),
+                'category' => $this->request->getPost('category'),
                 'image' => $imgdata,
             ]);
 
-            echo view('site/Messages/success');
+            $session = \Config\Services::session();
+            $session->setFlashdata('success', '1,Project made successfully!');
+            return redirect()->to('/');
         }
         else       
         {
-            echo view('site/create'); 
+            echo view('projects/create'); 
         }
     }
 }

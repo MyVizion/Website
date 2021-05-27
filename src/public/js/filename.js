@@ -1,6 +1,4 @@
-//const file = document.querySelector('#file');
 file = document.getElementById('file');
-console.log(file);
 file.addEventListener('change', (e) => {
   // Get the selected file
   const [file] = e.target.files;
@@ -13,3 +11,4 @@ file.addEventListener('change', (e) => {
   const fileNameAndSize = `${fileName} - ${fileSize}KB`;
   document.querySelector('.fileName').textContent = fileNameAndSize;
 });
+
