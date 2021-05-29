@@ -7,8 +7,8 @@
     <!--notifications-->
     <?php if (isset($session->success)): ?>
         <div class="alert"> 
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-            <strong>Hooray!</strong> Project made successfully!
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <?= $session->success ?> 
         </div>
     <?php endif; ?>
             <!--search section-------->

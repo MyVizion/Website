@@ -79,7 +79,7 @@
     width: 120px;
     height: 34px;
     border-radius: 4px;
-    background: #27a327;
+    background: #5fe0a0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,14 +105,14 @@
     height: 34px;
     border: none;
     outline: none;
-    background: #27a327;
+    background: #5fe0a0;
     cursor: pointer;
     font-size: 14px;
     color: white;
     border-radius: 4px;
 }
 .success{
-    background-color: #738f73;
+    background-color: #5fe0a0;
     height: 50px;
     text-align: center;
     justify-content: center;

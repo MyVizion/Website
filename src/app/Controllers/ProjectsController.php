@@ -15,23 +15,27 @@ class ProjectsController extends BaseController
             'projects' => $model->getProjects(),
         ];
 
+        // if project has no data
         if (empty($data['projects']))
         {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the project item: '. $slug);
+            // throw error
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the project item: '. $id);
         }
-    
-        echo view('projects/overview', $data);
+        
+        //else return view
+        return view('projects/overview', $data);
 	}
 
-    public function view()
+    //View function
+    public function view($id)
     {
         $model = new ProjectModel();
 
         $data = [
-            'projects' => $model->getProjects(),
+            'projects' => $model->getProjects($id),
         ];
 
-        echo view('projects/create', $data);
+        return view('projects/projectpage', $data);
     }
 
     // Edit function
@@ -41,15 +45,16 @@ class ProjectsController extends BaseController
 
         $data = [
             'projects' => $model->getProjects($id),
+            $model->find($id),
         ];
         
-        echo view('projects/projectpage', $data);
+        return view('projects/create', $data);
     }
     
     // Create Function
     public function create()
     {
-        echo view('projects/create'); 
+        return view('projects/create'); 
     }
 
     // Save Function
@@ -59,6 +64,7 @@ class ProjectsController extends BaseController
 
         $file = $this->request->getFile('image');
  
+        // check if input fields meet requirements
         if ($this->request->getMethod() === 'post' && $this->validate([
                 'title' => 'required|min_length[3]|max_length[30]',
                 'info'  => 'required|min_length[3]|max_length[1000]',
@@ -74,6 +80,7 @@ class ProjectsController extends BaseController
             $tempfile = $file->getTempName();
             $imgdata = file_get_contents($tempfile);
 
+            // if so, save data 
             $model->save([
                 'title' => $this->request->getPost('title'),
                 'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
@@ -86,13 +93,32 @@ class ProjectsController extends BaseController
                 'image' => $imgdata,
             ]);
 
+            //if saved succesfully, set flashdata and redirect to root
             $session = \Config\Services::session();
-            $session->setFlashdata('success', '1,Project made successfully!');
+            $session->setFlashdata('success', 'Project made successfully!');
             return redirect()->to('/');
         }
         else       
         {
-            echo view('projects/create'); 
+            return view('projects/create'); 
         }
+    }
+
+    function delete($id)
+    {
+        $model = new ProjectModel();
+
+        // if model find by id is true
+        if($model->find($id))
+        {
+            // Delete record
+            $model->delete($id);
+
+            // Set flashdata
+            $session = \Config\Services::session();
+            $session->setFlashdata('success', 'Deleted Successfully!');
+        }
+        
+            return redirect()->to('/');
     }
 }

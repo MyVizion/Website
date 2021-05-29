@@ -22,7 +22,7 @@ class PagesController extends BaseController
                 // Throw 404 error
                 throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
             }
-
+            // else return view
             return view('site/'.$page, $data);
         }
 }

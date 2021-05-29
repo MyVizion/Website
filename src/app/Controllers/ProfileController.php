@@ -6,8 +6,6 @@ use App\models\UserModel;
 
 class ProfileController extends \CodeIgniter\Controller
 {
-	
-
 	public function index($seg1)
 	{
 		$user = new UserModel(); // in de base controller
@@ -40,9 +38,9 @@ class ProfileController extends \CodeIgniter\Controller
 			'about' => $retAbout
 		];
 		if(empty($query)){ return view('site/messages/accountDoesntExist'); echo view('site/header.php');}
-		echo view('site/header.php');
-		echo view('site/profilePage', $data);
-         // search bar moet myVizion/profileName worden 
+		return view('site/header.php');
+		return view('site/profilePage', $data);
+        // search bar moet myVizion/profileName worden 
 	}
 	
 	public function ChangeProfile()
@@ -59,7 +57,7 @@ class ProfileController extends \CodeIgniter\Controller
             'changeUserName' => $ret
         ];
 
-		echo view('site/header.php');
-        echo view('site/ChangeForm', $data);
+		return view('site/header.php');
+        return view('site/ChangeForm', $data);
 	} 
 }
