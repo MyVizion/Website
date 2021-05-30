@@ -15,11 +15,36 @@
      border-bottom: 2px solid rgb(228, 228, 38) ;
      height: 13em;
      text-align:center;
-     line-height: 12em;
+     
 }
 .p-title p{
      font-size: 60px;
      font-weight: 500;
+     line-height: 2.2em;
+}
+/* Edit, Delete Button */
+.action-container{
+     display: flex;
+     justify-content: center;
+     line-height: 2em;
+}
+.edit{
+     background-color: #5fe0a0;
+     height: 30px;
+     width: 80px;
+     color: white;
+     font-size: 15px;
+     font-weight: 500;
+     cursor: pointer;
+}
+.delete{
+     background-color: #e05f5f;
+     height: 30px;
+     width: 80px;
+     color: white;
+     font-size: 15px;
+     font-weight: 500;
+     cursor: pointer;
 }
 /* About Container */
 .about-container{
@@ -64,6 +89,7 @@
 .item-box p{
      margin-top: 10px;
      font-size: 20px;
+     max-width: 110px;
      font-weight: 500;
 }
 .fa-clock{

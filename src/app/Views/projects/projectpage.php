@@ -18,6 +18,10 @@
           <!------------------------------------------------ Title -->
           <div class="p-title">
                <p><?=esc($projects['title'])?></p>
+                    <div class="action-container">
+                         <a href="/projects/create/151" class="edit">Edit</a>
+                         <a href="<?= site_url('projects/delete/'.$projects['id']) ?>" type="submit" class="delete">Delete</a>
+                    </div>
           </div>
           <!------------------------------------------------ About -->
           <div class="about-container">

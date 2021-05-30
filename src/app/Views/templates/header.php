@@ -9,6 +9,7 @@
     <li class = "navContent"><a href="#">Dashboard</a></li>
     <li class = "navContent"><a href="<?= route_to('create_page') ?>">Create Projects</a></li>
     <li class = "navContent"><a href="#">Profile</a></li>
+    <li class = "navContent"><a href="#">Survey</a></li>
 </ul>
     <!-- <div class="btn-container">
         <button class="loginButton Hbtn">Login</button>
