@@ -48,7 +48,7 @@ class ProjectsController extends BaseController
             $model->find($id),
         ];
         
-        return view('projects/create', $data);
+        return view('projects/edit', $data);
     }
     
     // Create Function
@@ -76,7 +76,7 @@ class ProjectsController extends BaseController
                 'image' => 'uploaded[image]',
             ]))
         {
-            
+            // get temporary file name
             $tempfile = $file->getTempName();
             $imgdata = file_get_contents($tempfile);
 
@@ -93,17 +93,59 @@ class ProjectsController extends BaseController
                 'image' => $imgdata,
             ]);
 
-            //if saved succesfully, set flashdata and redirect to root
+            // if saved succesfully, set flashdata and redirect to root (homepage)
             $session = \Config\Services::session();
             $session->setFlashdata('success', 'Project made successfully!');
             return redirect()->to('/');
         }
+        // if not
         else       
         {
+            // keep viewing create page
             return view('projects/create'); 
         }
     }
 
+    // Update Function
+    public function update()
+    {
+        $model = new ProjectModel();
+
+        // check if input fields meet requirements
+        if ($this->request->getMethod() === 'post' && $this->validate([
+                'title' => 'required|min_length[3]|max_length[30]',
+                'info'  => 'required|min_length[3]|max_length[1000]',
+                'location' => 'required',
+                'time' => 'required',
+                'needs' => 'required',
+                'category' => 'required',
+            ]))
+        {
+
+            // if so, save data 
+            $model->save([
+                'title' => $this->request->getPost('title'),
+                'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
+                'info'  => $this->request->getPost('info'),
+                'location' => $this->request->getPost('location'),
+                'time' => $this->request->getPost('time'),
+                'needs' => $this->request->getPost('needs'),
+                'category' => $this->request->getPost('category'),
+            ]);
+
+            // if saved succesfully, set flashdata and redirect to root (homepage)
+            $session = \Config\Services::session();
+            $session->setFlashdata('success', 'Project changed successfully!');
+            return redirect()->to('projects/projectpage');
+        }
+        // if not
+        else       
+        {
+            // keep viewing edit page
+            return view('projects/edit'); 
+        }
+    }
+  
     function delete($id)
     {
         $model = new ProjectModel();
@@ -118,7 +160,7 @@ class ProjectsController extends BaseController
             $session = \Config\Services::session();
             $session->setFlashdata('success', 'Deleted Successfully!');
         }
-        
+            //redirect to root (homepage)
             return redirect()->to('/');
     }
 }

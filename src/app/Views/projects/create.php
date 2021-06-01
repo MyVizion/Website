@@ -7,35 +7,35 @@
                 <?= csrf_field() ?>
                     <!--Title-->
                     <div class="form-input">
-                        <input class="ph-title" type="input" name="title" placeholder="Title" value="<?= ($data) ?'title': ''; ?>" />
+                        <input class="ph-title" type="input" name="title" placeholder="Title"  />
                     </div>
                     <!--Username-->
                     <div class="form-input">
-                        <input class="ph-title" type="input" name="creator" placeholder="Username" value="<?= ($data) ?'username': ''; ?>" />
+                        <input class="ph-title" type="input" name="creator" placeholder="Username"  />
                     </div>
                     <!--Location-->
                     <div class="form-input">
-                        <input class="ph-title" type="input" name="location" placeholder="Location" value="<?= ($data) ?'location': ''; ?>"/>
+                        <input class="ph-title" type="input" name="location" placeholder="Location" />
                     </div>
                     <!--Time-->
                     <div class="grow-wrap">
-                        <input class="ph-title" type="input" name="time" placeholder="Time" value="<?= ($data) ?'time': ''; ?>" />
+                        <input class="ph-title" type="input" name="time" placeholder="Time" />
                     </div>
                     <!--Category-->
                     <div class="grow-wrap">
-                        <input class="ph-title" type="input" name="category" placeholder="Category" value="<?= ($data) ?'category': ''; ?>" />
+                        <input class="ph-title" type="input" name="category" placeholder="Category"  />
                     </div>
                     <!--Needs-->
                     <div class="grow-wrap">
-                        <input class="ph-title" type="input" name="needs" placeholder="Stuff needed" value="<?= ($data) ?'needs': ''; ?>" />
+                        <input class="ph-title" type="input" name="needs" placeholder="Stuff needed"  />
                     </div>
                     <!--Info-->
                     <div class="grow-wrap">
-                        <textarea class="ph-info" name="info" placeholder="Type in project info" value="<?= ($data) ?'info': ''; ?>"></textarea>
+                        <textarea class="ph-info" name="info" placeholder="Type in project info" ></textarea>
                     </div>
                     <!--File-->
                     <div class="file-input">
-                        <input class="file" id="file" type="file" name="image" value="<?= ($data) ?'title': ''; ?>"/>
+                        <input class="file" id="file" type="file" name="image" />
                             <label for="file">
                                 Select file
                                 <p class="fileName"></p>
