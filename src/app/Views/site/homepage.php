@@ -1,7 +1,7 @@
 <?= $this->extend('site/mainpage')?>
-<?= $this->section('header') ?>
-<?= $this->include('templates/header') ?> 
-<?= $this->endSection() ?> 
+    <?= $this->section('header') ?>
+        <?= $this->include('templates/header') ?> 
+    <?= $this->endSection() ?> 
 <?= $this->section('content') ?>
 <?php $session = \Config\Services::session();?>
     <!--notifications-->
@@ -53,7 +53,7 @@
             </div>
 
 <?= $this->endSection() ?> 
-<?= $this->section('footer') ?>
-<?= $this->include('templates/footer') ?> 
-<?= $this->endSection() ?> 
+    <?= $this->section('footer') ?>
+        <?= $this->include('templates/footer') ?> 
+    <?= $this->endSection() ?> 
 

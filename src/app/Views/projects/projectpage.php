@@ -3,6 +3,14 @@
           <?= $this->include('templates/header') ?> 
      <?= $this->endSection() ?> 
 <?= $this->section('content') ?>
+<?php $session = \Config\Services::session();?>
+   <!--notifications-->
+   <?php if (isset($session->success)): ?>
+        <div class="alert"> 
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <?= $session->success ?> 
+        </div>
+    <?php endif; ?>
      <!--------------------------------- if project data is empty: -->
      <?php if (empty($projects)) : ?>
           <!---------------------------------------------- Display -->
@@ -19,7 +27,7 @@
           <div class="p-title">
                <p><?=esc($projects['title'])?></p>
                     <div class="action-container">
-                         <a href="/projects/create/151" class="edit">Edit</a>
+                         <a href="<?= site_url('projects/edit/'.$projects['id']) ?>" class="edit">Edit</a>
                          <a href="<?= site_url('projects/delete/'.$projects['id']) ?>" type="submit" class="delete">Delete</a>
                     </div>
           </div>
