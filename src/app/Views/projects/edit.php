@@ -2,7 +2,7 @@
 <?= $this->section('content') ?>
     <div class="parent">
     <?= \Config\Services::validation()->listErrors() ?>
-        <form action="<?= site_url('projects/edit/'.$projects['id']) ?>" method="post" enctype="multipart/form-data">
+        <form action="projects/edit/<?=$projects['id'] ?>" method="post" enctype="multipart/form-data">
                 <h1>Edit Project</h1>
                 <?= csrf_field() ?>
                     <!--Title-->

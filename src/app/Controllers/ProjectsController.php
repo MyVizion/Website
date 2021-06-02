@@ -67,16 +67,16 @@ class ProjectsController extends BaseController
         // check if input fields meet requirements
         if ($this->request->getMethod() === 'post' && $this->validate([
                 'title' => 'required|min_length[3]|max_length[30]',
-                'info'  => 'required|min_length[3]|max_length[1000]',
                 'creator' => 'required',
                 'location' => 'required',
                 'time' => 'required',
-                'needs' => 'required',
                 'category' => 'required',
+                'needs' => 'required',
+                'info'  => 'required|min_length[3]|max_length[1000]',
                 'image' => 'uploaded[image]',
             ]))
         {
-            // get temporary file name
+            // store image BLOB data
             $tempfile = $file->getTempName();
             $imgdata = file_get_contents($tempfile);
 
@@ -84,12 +84,12 @@ class ProjectsController extends BaseController
             $model->save([
                 'title' => $this->request->getPost('title'),
                 'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
-                'info'  => $this->request->getPost('info'),
                 'creator' => $this->request->getPost('creator'),
                 'location' => $this->request->getPost('location'),
                 'time' => $this->request->getPost('time'),
-                'needs' => $this->request->getPost('needs'),
                 'category' => $this->request->getPost('category'),
+                'needs' => $this->request->getPost('needs'),
+                'info'  => $this->request->getPost('info'),
                 'image' => $imgdata,
             ]);
 
@@ -114,11 +114,11 @@ class ProjectsController extends BaseController
         // check if input fields meet requirements
         if ($this->request->getMethod() === 'post' && $this->validate([
                 'title' => 'required|min_length[3]|max_length[30]',
-                'info'  => 'required|min_length[3]|max_length[1000]',
                 'location' => 'required',
                 'time' => 'required',
-                'needs' => 'required',
                 'category' => 'required',
+                'needs' => 'required',
+                'info'  => 'required|min_length[3]|max_length[1000]',
             ]))
         {
 
@@ -126,17 +126,17 @@ class ProjectsController extends BaseController
             $model->save([
                 'title' => $this->request->getPost('title'),
                 'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
-                'info'  => $this->request->getPost('info'),
                 'location' => $this->request->getPost('location'),
                 'time' => $this->request->getPost('time'),
-                'needs' => $this->request->getPost('needs'),
                 'category' => $this->request->getPost('category'),
+                'needs' => $this->request->getPost('needs'),
+                'info'  => $this->request->getPost('info'),
             ]);
 
-            // if saved succesfully, set flashdata and redirect to root (homepage)
+            // if saved succesfully, set flashdata and redirect to dedicated projectpage
             $session = \Config\Services::session();
             $session->setFlashdata('success', 'Project changed successfully!');
-            return redirect()->to('projects/projectpage');
+            return redirect()->to('projectpage');
         }
         // if not
         else       
@@ -145,12 +145,13 @@ class ProjectsController extends BaseController
             return view('projects/edit'); 
         }
     }
-  
+
+    // Delete function
     function delete($id)
     {
         $model = new ProjectModel();
 
-        // if model find by id is true
+        // find id
         if($model->find($id))
         {
             // Delete record
