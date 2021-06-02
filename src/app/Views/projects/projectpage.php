@@ -27,8 +27,8 @@
           <div class="p-title">
                <p><?=esc($projects['title'])?></p>
                     <div class="action-container">
-                         <a href="<?= site_url('projects/edit/'.$projects['id']) ?>" class="edit">Edit</a>
-                         <a href="<?= site_url('projects/delete/'.$projects['id']) ?>" type="submit" class="delete">Delete</a>
+                         <a href="edit/<?= $projects['id'] ?>" class="edit">Edit</a>
+                         <a href="delete/<?= $projects['id'] ?>" type="submit" class="delete">Delete</a>
                     </div>
           </div>
           <!------------------------------------------------ About -->
