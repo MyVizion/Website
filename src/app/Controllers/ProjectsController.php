@@ -44,8 +44,7 @@ class ProjectsController extends BaseController
         $model = new ProjectModel();
 
         $data = [
-            'projects' => $model->getProjects($id),
-            $model->find($id),
+            'projects' => $model->find($id),
         ];
         
         return view('projects/edit', $data);
@@ -67,7 +66,6 @@ class ProjectsController extends BaseController
         // check if input fields meet requirements
         if ($this->request->getMethod() === 'post' && $this->validate([
                 'title' => 'required|min_length[3]|max_length[30]',
-                'creator' => 'required',
                 'location' => 'required',
                 'time' => 'required',
                 'category' => 'required',
@@ -84,7 +82,6 @@ class ProjectsController extends BaseController
             $model->save([
                 'title' => $this->request->getPost('title'),
                 'slug'  => url_title($this->request->getPost('title'), '-', TRUE),
-                'creator' => $this->request->getPost('creator'),
                 'location' => $this->request->getPost('location'),
                 'time' => $this->request->getPost('time'),
                 'category' => $this->request->getPost('category'),
@@ -107,7 +104,7 @@ class ProjectsController extends BaseController
     }
 
     // Update Function
-    public function update()
+    public function update($id)
     {
         $model = new ProjectModel();
 
@@ -121,6 +118,10 @@ class ProjectsController extends BaseController
                 'info'  => 'required|min_length[3]|max_length[1000]',
             ]))
         {
+            
+            $data = [
+                $id
+            ];
 
             // if so, save data 
             $model->save([
@@ -131,12 +132,13 @@ class ProjectsController extends BaseController
                 'category' => $this->request->getPost('category'),
                 'needs' => $this->request->getPost('needs'),
                 'info'  => $this->request->getPost('info'),
+                'id' => $id,
             ]);
 
             // if saved succesfully, set flashdata and redirect to dedicated projectpage
             $session = \Config\Services::session();
             $session->setFlashdata('success', 'Project changed successfully!');
-            return redirect()->to('projectpage');
+            return redirect()->route('project_page', [$id]);
         }
         // if not
         else       

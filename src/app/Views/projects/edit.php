@@ -2,7 +2,7 @@
 <?= $this->section('content') ?>
     <div class="parent">
     <?= \Config\Services::validation()->listErrors() ?>
-        <form action="projects/edit/<?=$projects['id'] ?>" method="post" enctype="multipart/form-data">
+        <form action="<?= route_to('update', $projects['id']) ?>" method="post" enctype="multipart/form-data">
                 <h1>Edit Project</h1>
                 <?= csrf_field() ?>
                     <!--Title-->
@@ -27,7 +27,7 @@
                     </div>
                     <!--Info-->
                     <div class="grow-wrap">
-                        <textarea class="ph-info" name="info" placeholder="Type in project info" value="<?= $projects['info'] ?>"></textarea>
+                        <textarea class="ph-info" name="info" placeholder="Type in project info"><?= $projects['info'] ?></textarea>
                     </div>
             <input class="create-btn" type="submit" name="submit" value="Submit"/>
         </form>
