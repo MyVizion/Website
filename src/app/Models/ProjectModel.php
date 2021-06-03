@@ -11,7 +11,7 @@ class ProjectModel extends Model
 
     //Allowed Database Fields
     protected $allowedFields = ['title', 'slug', 'info', 'image', 
-                                'creator', 'location', 'time', 'needs', 'category'];
+                                'location', 'time', 'needs', 'category'];
 
     public function getProjects($id = false)
     {

@@ -9,10 +9,6 @@
                     <div class="form-input">
                         <input class="ph-title" type="input" name="title" placeholder="Title"  />
                     </div>
-                    <!--Username-->
-                    <div class="form-input">
-                        <input class="ph-title" type="input" name="creator" placeholder="Username"  />
-                    </div>
                     <!--Location-->
                     <div class="form-input">
                         <input class="ph-title" type="input" name="location" placeholder="Location" />

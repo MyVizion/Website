@@ -32,19 +32,25 @@ $routes->setAutoRoute(false);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-// $routes->get('/', 'Home::index');
 $routes->get('/', 'PagesController::index');
 
 $routes->add('(:segment)', 'ProfileController::index/$1');
 $routes->add('(:any)/change', 'ProfileController::ChangeProfile');
 
 //CRUD 
+// Show the project boxes on homepage
 $routes->get('projects', 'ProjectsController::index');
-$routes->post('projects/create', 'ProjectsController::save/$1');
+// Goes to create function
 $routes->get('projects/create', 'ProjectsController::create', ['as' => 'create_page']);
-$routes->get('projects/(:num)', 'ProjectsController::view/$1');
-$routes->get('projects/edit/(:num)', 'ProjectsController::edit/$1');
-$routes->post('projects/edit/(:num)', 'ProjectsController::update/$1');
+// Goes to save function 
+$routes->post('projects/create/', 'ProjectsController::save/$1');
+// Views the project page
+$routes->get('projects/(:num)', 'ProjectsController::view/$1', ['as' => 'project_page']);
+// Goes to the edit function
+$routes->get('projects/edit/(:num)', 'ProjectsController::edit/$1', ['as' => 'edit_page']);
+// Goes to the update function
+$routes->post('projects/update/(:num)', 'ProjectsController::update/$1', ['as' => 'update']);
+// Goes to the delete function
 $routes->get('projects/delete/(:num)', 'ProjectsController::delete/$1');
 
 /*

@@ -27,7 +27,7 @@
           <div class="p-title">
                <p><?=esc($projects['title'])?></p>
                     <div class="action-container">
-                         <a href="edit/<?= $projects['id'] ?>" class="edit">Edit</a>
+                         <a href="<?= route_to('edit_page', $projects['id']) ?>" class="edit">Edit</a>
                          <a href="delete/<?= $projects['id'] ?>" type="submit" class="delete">Delete</a>
                     </div>
           </div>
