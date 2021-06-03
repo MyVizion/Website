@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: myvizion-mysql-cert
+  namespace: myvizion-web-ns
+spec:
+  dnsNames:
+    - mysql.myvizion.net
+  secretName: myvizion-mysql-tls
+  issuerRef:
+    name: letsencrypt-cluster-issuer
+    kind: ClusterIssuer

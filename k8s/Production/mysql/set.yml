@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: myvizion-mysql
+  namespace: myvizion-web-ns
+  labels:
+    app: myvizion-mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myvizion-mysql
+  serviceName: "myvizion-mysql-service"
+  template:
+    metadata:
+      labels:
+        app: myvizion-mysql
+    spec:
+      containers:
+      - name: myvizion-mysql
+        image: mysql:8.0.25
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3306
+          name: mysql
+          protocol: TCP
+        env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "tv4bT3WT"
