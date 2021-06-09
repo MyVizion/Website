@@ -50,7 +50,7 @@ class ProfileController extends \CodeIgniter\Controller
         $query = $user->where('username', 'Linus')->find();
 
         foreach($query as $row){
-            $ret = $row['username']; 
+            $ret = $row['username'] ; 
         }
 
         $data = [
