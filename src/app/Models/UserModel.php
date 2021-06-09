@@ -6,13 +6,24 @@ use CodeIgniter\Model;
 
 class UserModel extends Model{
     
-    protected $DBGroup = 'default'; 
-    
-    protected $table = 'profiles';
+    protected $table = 'users';
+    protected $beforeInsert = ['beforeInsert'];
+    protected $beforeUpdate = ['beforeUpdate'];
+    protected $allowedFields = ['firstname','lastname','email','password', 'updated_at'];
 
-    protected $primaryKey = 'userName';
+    protected function beforeInsert(array $data){
+        $data = $this->passwordHash($data);
+        return $data;
+    }
 
-    protected $return = 'array';
+    protected function beforeUpdate(array $data){
+        $data = $this->passwordHash($data);
+        return $data;
+    }
 
-    protected $allowedFields = ['userName','location','uni','studyProgram'];
+    protected function passwordHash(array $data){
+        if(! isset($data['data']['password']))
+         $data['data']['password'] = password_hash($data['data']['password']. PASSWORD_DEFAULT);
+        return $data;
+    }
 }

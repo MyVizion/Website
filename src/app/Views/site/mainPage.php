@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="/css/cookies.css" />
         <link rel="stylesheet" href="/css/profilepage.css" />
         <link rel="stylesheet" href="/css/footer.css" />
+        <link rel="stylesheet" href="/css/login.css" />
         <!-- Jquery File -->
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <!-- Fontawesome -->
