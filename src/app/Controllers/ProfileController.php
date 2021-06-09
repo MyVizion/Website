@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-use App\models\UserModel;
+use App\models\ProfileModel;
 
 class ProfileController extends \CodeIgniter\Controller
 {
 	public function index($seg1)
 	{
-		$user = new UserModel(); // in de base controller
+		$user = new ProfileModel(); // in de base controller
 
 		// var_dump($user->where('userName', $User)->find());
 		$query = $user->where('userName', $seg1)->find();// misschien ook nog het id checken zodat je geen rare bugs krijgt en misschien sws checken of een user name bestaat of niet
@@ -45,7 +45,7 @@ class ProfileController extends \CodeIgniter\Controller
 	
 	public function ChangeProfile()
 	{
-		$user = new UserModel();
+		$user = new ProfileModel();
 
         $query = $user->where('username', 'Linus')->find();
 

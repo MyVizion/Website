@@ -36,10 +36,13 @@ $routes->get('/', 'PagesController::index');
 
 $routes->add('(:segment)', 'ProfileController::index/$1');
 $routes->add('(:any)/change', 'ProfileController::ChangeProfile');
+//LOGIN
+$routes->get('login', 'UserController::index', ['as' => 'login_page']);
+$routes->get('register', 'UserController::register', ['as' => 'register_page']);
 
 //CRUD 
 // Show the project boxes on homepage
-$routes->get('projects', 'ProjectsController::index');
+$routes->get('projects', 'ProjectsController::index' );
 // Goes to create function
 $routes->get('projects/create', 'ProjectsController::create', ['as' => 'create_page']);
 // Goes to save function 
