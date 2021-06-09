@@ -11,13 +11,19 @@
     <li class = "navContent"><a href="#">Profile</a></li>
     <li class = "navContent"><a href="#">Survey</a></li>
 </ul>
-    <!-- <div class="btn-container">
-        <button class="loginButton Hbtn">Login</button>
-        <button class="joinButton Hbtn">Join</button>
+<!-- Hamburger Menu -->
+<div class="toggle nav-menu"></div>
+
+    <div class="btn-container">
+        <button class="loginButton Hbtn">
+            <a href="<?= route_to('login_page') ?>">Login</a>
+        </button>
+        <button class="joinButton Hbtn">
+            <a>Join</a>
+        </button>
         <a class="fas fa-user-circle Hicon"></a>
         <a class="fas fa-envelope Hicon"></a>
         <a class="fas fa-bell Hicon"></a>
-    <div> -->
+    <div> 
 
-<!-- Hamburger Menu -->
-<div class="toggle nav-menu"></div>
+
