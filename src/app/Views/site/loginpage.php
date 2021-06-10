@@ -20,7 +20,7 @@
                         <input class="l-input" id="email" type="text" name="email" placeholder="USERNAME" value="<?= set_value('email') ?>" />
                     </div>
                     <div class="form-input">
-                        <input class="l-input" id="password" type="password" name="password" placeholder="PASSWORD" value="<?= set_value('password') ?>" />
+                        <input class="l-input" id="password" type="password" name="password" placeholder="PASSWORD" value="" />
                     </div>
                     <input class="login-btn" type="submit" name="login" value="Login"/>
                     <p><a href="#">Forgot your password?</a></p>

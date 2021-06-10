@@ -31,12 +31,14 @@ class UserController extends BaseController
             }else{
                 $model = new UserModel();
 
-                $user = $model->model('email', $this->request->getVar('email'))
+                $user = $model->where('email', $this->request->getVar('email'))
                               ->first();
 
-                $this-setUserMethod($user); // call setUserMethod function
+                        
+                $this->setUserMethod($user); // call setUserMethod function
 
                 $session = session();
+                $session->setFlashdata('success', 'Successfully logged in!');
                 return redirect()->to('/'); // moet later op profilepage
             }
         }
