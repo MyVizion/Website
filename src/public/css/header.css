@@ -15,7 +15,7 @@ nav{
   width: 100%;
   background-color: #ffffff;
 }
-ul{
+.navList{
   list-style: none;
   margin: 0;
   padding: 0;
@@ -31,10 +31,10 @@ a{
   width: auto; 
   left: 0px;
 }
-nav ul{
+nav .navList{
   display: flex;
 }
-nav ul li a{
+nav .navList li a{
   margin: 20px;
   color:#505050;
   font-size: 20px;

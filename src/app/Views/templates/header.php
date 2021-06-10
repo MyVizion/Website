@@ -19,7 +19,7 @@
             <a href="<?= route_to('login_page') ?>">Login</a>
         </button>
         <button class="joinButton Hbtn">
-            <a>Join</a>
+            <a href="<?= route_to('register_page') ?>">Join</a>
         </button>
         <a class="fas fa-user-circle Hicon"></a>
         <a class="fas fa-envelope Hicon"></a>

@@ -34,11 +34,12 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 $routes->get('/', 'PagesController::index');
 
-$routes->add('(:segment)', 'ProfileController::index/$1');
-$routes->add('(:any)/change', 'ProfileController::ChangeProfile');
+//$routes->add('(:segment)', 'ProfileController::index/$1');
+//$routes->add('(:any)/change', 'ProfileController::ChangeProfile');
+
 //LOGIN
-$routes->get('login', 'UserController::index', ['as' => 'login_page']);
-$routes->get('register', 'UserController::register', ['as' => 'register_page']);
+$routes->match(['get', 'post'],'login', 'UserController::index', ['as' => 'login_page']);
+$routes->match(['get', 'post'], 'register', 'UserController::register', ['as' => 'register_page']);
 
 //CRUD 
 // Show the project boxes on homepage

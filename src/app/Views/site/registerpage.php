@@ -9,31 +9,32 @@
                 <div class="logo-head">
                     <img src="images/logos/logo 1.1 Dark Red.png" class="biglogo">
                 </div>
+                <?php if (isset($validation)): ?>
+                    <div class="warning">
+                        <?= $validation->listErrors() ?>
+                    </div>
+                <?php endif; ?>
                 <div class="wrappy">
                     <h1>REGISTER</h1>
                     <div class="form-input">
-                        <input class="l-input" id="firstname" type="input" name="firstname" placeholder="FIRSTNAME" />
+                        <input class="l-input" id="firstname" type="text" name="firstname" placeholder="FIRSTNAME" />
                     </div>
                     <div class="form-input">
-                        <input class="l-input" id="lastname" type="input" name="lastname" placeholder="LASTNAME" />
+                        <input class="l-input" id="lastname" type="text" name="lastname" placeholder="LASTNAME" />
                     </div>
                     <div class="form-input">
-                        <input class="l-input" id="email" type="input" name="email" placeholder="E-MAIL"/>
+                        <input class="l-input" id="email" type="text" name="email" placeholder="E-MAIL"/>
                     </div>
                     <div class="form-input">
-                        <input class="l-input" id="password" type="input" name="location" placeholder="PASSWORD" />
+                        <input class="l-input" id="password" type="password" name="password" placeholder="PASSWORD" />
                     </div>
                     <div class="form-input">
-                        <input class="l-input" id="password-confirm" type="input" name="location" placeholder="CONFIRM PASSWORD" />
+                        <input class="l-input" id="password-confirm" type="password" name="password_confirm" placeholder="CONFIRM PASSWORD" />
                     </div>
-                    <input class="login-btn" type="submit" name="login" value="Register"/>
+                    <input class="login-btn" type="submit" name="register" value="Register"/>
                 </div>
         </form>
-        <?php if (isset($validation)): ?>
-            <div class="warning">
-                <?= $validation->listErrors() ?>
-            </div>
-        <?php endif; ?>
+     
     </div>
 
     <div class="bottom">
