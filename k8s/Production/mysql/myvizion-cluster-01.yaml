@@ -5,7 +5,7 @@
 apiVersion: planetscale.com/v2
 kind: VitessCluster
 metadata:
-  name: myvizion-cluster-01
+  name: myvizionclu01
 spec:
   images:
     vtctld: vitess/lite:10.0.2
@@ -16,7 +16,7 @@ spec:
       mysql56Compatible: vitess/lite:10.0.2
     mysqldExporter: prom/mysqld-exporter:v0.11.0
   cells:
-  - name: AMS3
+  - name: ams3
     gateway:
       authentication:
         static:
@@ -32,7 +32,7 @@ spec:
           memory: 256Mi
   vitessDashboard:
     cells:
-    - AMS3
+    - ams3
     extraFlags:
       security_policy: read-only
     replicas: 1
@@ -56,7 +56,7 @@ spec:
           replication:
             enforceSemiSync: false
           tabletPools:
-          - cell: AMS3
+          - cell: ams3
             type: replica
             replicas: 2
             vttablet:
