@@ -23,6 +23,15 @@ spec:
       containers:
       - name: myvizion-web
         image: myvizion/website:latest
+        env:
+        - name: database.default.hostname
+          value: myvizionclu01-ams3-vtgate-80fc1025-588fd775db-n875v
+        - name: database.default.database
+          value: myvizion
+        - name: database.default.username
+          value: user
+        - name: database.default.password
+          value: ""
         imagePullPolicy: Always
         resources:
           requests:
