@@ -8,12 +8,12 @@ metadata:
   name: myvizionclu01
 spec:
   images:
-    vtctld: vitess/lite:mysql80
-    vtgate: vitess/lite:mysql80
-    vttablet: vitess/lite:mysql80
-    vtbackup: vitess/lite:mysql80
+    vtctld: vitess/lite:latest
+    vtgate: vitess/lite:latest
+    vttablet: vitess/lite:latest
+    vtbackup: vitess/lite:latest
     mysqld:
-      mysql56Compatible: vitess/lite:mysql80
+      mysql56Compatible: vitess/lite:latest
     mysqldExporter: prom/mysqld-exporter:v0.11.0
   cells:
   - name: ams3
@@ -21,7 +21,7 @@ spec:
       authentication:
         static:
           secret:
-            name: myvizion-cluster-01-config
+            name: myvizion-clu-01-config
             key: users.json
       replicas: 1
       resources:
@@ -42,6 +42,7 @@ spec:
       requests:
         cpu: 100m
         memory: 128Mi
+
   keyspaces:
   - name: threesixtyallround
     turndownPolicy: Immediate
@@ -50,7 +51,7 @@ spec:
         parts: 1
         shardTemplate:
           databaseInitScriptSecret:
-            name: myvizion-cluster-01-config
+            name: myvizion-clu-01-config
             key: init_db.sql
           replication:
             enforceSemiSync: false
@@ -74,6 +75,6 @@ spec:
               accessModes: ["ReadWriteOnce"]
               resources:
                 requests:
-                  storage: 5Gi
+                  storage: 10Gi
   updateStrategy:
     type: Immediate
