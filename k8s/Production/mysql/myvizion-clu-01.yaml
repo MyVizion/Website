@@ -44,41 +44,6 @@ spec:
         memory: 128Mi
 
   keyspaces:
-  - name: threesixtyallround
-    turndownPolicy: Immediate
-    partitionings:
-    - equal:
-        parts: 1
-        shardTemplate:
-          databaseInitScriptSecret:
-            name: myvizion-clu-01-config
-            key: init_db.sql
-          replication:
-            enforceSemiSync: false
-          tabletPools:
-          - cell: ams3
-            type: replica
-            replicas: 1
-            vttablet:
-              extraFlags:
-                db_charset: utf8mb4
-              resources:
-                requests:
-                  cpu: 100m
-                  memory: 256Mi
-            mysqld:
-              resources:
-                requests:
-                  cpu: 100m
-                  memory: 256Mi
-            dataVolumeClaimTemplate:
-              accessModes: ["ReadWriteOnce"]
-              resources:
-                requests:
-                  storage: 1Gi
-  updateStrategy:
-    type: Immediate
-
   - name: myvizion
     turndownPolicy: Immediate
     partitionings:
