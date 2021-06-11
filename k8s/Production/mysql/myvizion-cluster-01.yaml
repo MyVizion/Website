@@ -43,40 +43,6 @@ spec:
         cpu: 100m
         memory: 128Mi
   keyspaces:
-  - name: myvizion
-    turndownPolicy: Immediate
-    partitionings:
-    - equal:
-        parts: 1
-        shardTemplate:
-          databaseInitScriptSecret:
-            name: myvizion-cluster-01-config
-            key: init_db.sql
-          replication:
-            enforceSemiSync: false
-          tabletPools:
-          - cell: ams3
-            type: replica
-            replicas: 2
-            vttablet:
-              extraFlags:
-                db_charset: utf8mb4
-              resources:
-                requests:
-                  cpu: 100m
-                  memory: 256Mi
-            mysqld:
-              resources:
-                requests:
-                  cpu: 100m
-                  memory: 256Mi
-            dataVolumeClaimTemplate:
-              accessModes: ["ReadWriteOnce"]
-              resources:
-                requests:
-                  storage: 10Gi
-  updateStrategy:
-    type: Immediate
   - name: threesixtyallround
     turndownPolicy: Immediate
     partitionings:
@@ -108,6 +74,6 @@ spec:
               accessModes: ["ReadWriteOnce"]
               resources:
                 requests:
-                  storage: 10Gi
+                  storage: 5Gi
   updateStrategy:
     type: Immediate
