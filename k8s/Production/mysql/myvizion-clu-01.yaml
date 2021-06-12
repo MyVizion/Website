@@ -5,7 +5,8 @@
 apiVersion: planetscale.com/v2
 kind: VitessCluster
 metadata:
-  name: myvizionclu01
+  name: myvizion-clu-01
+  namespace: myvizion-web-ns
 spec:
   images:
     vtctld: vitess/lite:latest
@@ -21,7 +22,7 @@ spec:
       authentication:
         static:
           secret:
-            name: myvizion-clu-01-config
+            name: myvizion-clu-01-users
             key: users.json
       replicas: 1
       resources:
@@ -51,7 +52,7 @@ spec:
         parts: 1
         shardTemplate:
           databaseInitScriptSecret:
-            name: myvizion-clu-01-config
+            name: myvizion-clu-01-db-init
             key: init_db.sql
           replication:
             enforceSemiSync: false

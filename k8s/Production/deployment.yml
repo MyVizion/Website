@@ -25,13 +25,13 @@ spec:
         image: myvizion/website:latest
         env:
         - name: database.default.hostname
-          value: myvizionclu01-ams3-vtgate-80fc1025-588fd775db-n875v
+          value: myvizion-vtgate
         - name: database.default.database
           value: myvizion
         - name: database.default.username
-          value: user
+          value: myvizion
         - name: database.default.password
-          value: ""
+          value: Y1WKqTOzL43p
         imagePullPolicy: Always
         resources:
           requests:

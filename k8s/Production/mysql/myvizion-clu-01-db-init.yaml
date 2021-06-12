@@ -1,16 +1,10 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: myvizion-clu-01-config
+  name: myvizion-clu-01-db-init
+  namespace: myvizion-web-ns
 type: Opaque
 stringData:
-  users.json: |
-    {
-      "user": [{
-        "UserData": "myvizion",
-        "Password": "Y1WKqTOzL43p"
-      }]
-    }
   init_db.sql: |
     # This file is executed immediately after mysql_install_db,
     # to initialize a fresh data directory.
