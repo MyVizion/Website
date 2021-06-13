@@ -7,7 +7,7 @@ stringData:
   users.json: |
     {
       "user": [{
-        "UserData": "myvizion",
-        "Password": "Y1WKqTOzL43p"
+        "UserData": "user",
+        "Password": ""
       }]
     }
