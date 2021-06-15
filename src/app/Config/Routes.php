@@ -40,6 +40,7 @@ $routes->get('/', 'PagesController::index');
 //LOGIN
 $routes->match(['get', 'post'],'login', 'UserController::index', ['as' => 'login_page']);
 $routes->match(['get', 'post'], 'register', 'UserController::register', ['as' => 'register_page']);
+$routes->get('logout', 'UserController::logout', ['as' => 'logout_page']);
 
 //CRUD 
 // Show the project boxes on homepage

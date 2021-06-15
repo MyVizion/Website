@@ -139,12 +139,13 @@ input, button:focus{
 }
 .project-box{
     background-color: black;
-    width: 275px;
+    width: 250px;
     height: 250px;
     margin: 50px 30px 0px 30px; 
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
     display: flex;
     align-items: center;
     flex-direction: column;

@@ -25,7 +25,7 @@ class UserController extends BaseController
                 ]
             ];
 
-            // If data is nto validated
+            // If data is not validated
             if (! $this->validate($rules, $errors)) {
                 $data['validation'] = $this->validator; // throw error
             }else{
@@ -56,6 +56,16 @@ class UserController extends BaseController
 
         session()->set($data); // set session
         return true;
+    }
+
+    public function logout(){
+        $data = [
+            'isLoggedIn' => false
+        ];
+
+        session()->destroy();
+        return redirect()->to('login');
+        return false;
     }
 
     // Registrate User
