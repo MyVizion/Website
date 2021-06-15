@@ -87,6 +87,21 @@
 .login a{
     color: #3866d1;
 }
+.warning{
+    background-color: #ff8882;
+    text-align: center;
+}
+.errors ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.errors li{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
 
 
 
