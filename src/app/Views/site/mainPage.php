@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="/Images/logos/iconDarkRed.png" type="image/x-icon">
+        <link rel="shortcut icon" href="https://ams3-myvizion-cdn-01.ams3.cdn.digitaloceanspaces.com/srcimages/logos/iconDarkRed.png" type="image/x-icon">
         <!-- CSS Files -->
         <link rel="stylesheet" href="/css/header.css" />
         <link rel="stylesheet" href="/css/homepage.css" />

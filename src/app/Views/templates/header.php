@@ -1,7 +1,7 @@
 <?php if(session()->get('isLoggedIn')): ?>
     <!------------------------------------- Logo -->
     <a href="/" class="logo">
-        <img class ="logo-img" src="/images/logos/logoNobackgroundRed.png" alt="HOME">
+        <img class ="logo-img" src="https://ams3-myvizion-cdn-01.ams3.cdn.digitaloceanspaces.com/srcimages/logos/logoNobackgroundRed.png" alt="HOME">
     </a>
     <!------------------------------------- Menu -->
     <ul class = "navList">
@@ -28,7 +28,7 @@
             <?php else: ?>
             <!------------------------------------- Logo -->
             <a href="/" class="logo">
-                <img class ="logo-img" src="/images/logos/logoNobackgroundRed.png" alt="HOME">
+                <img class ="logo-img" src="https://ams3-myvizion-cdn-01.ams3.cdn.digitaloceanspaces.com/srcimages/logos/logoNobackgroundRed.png" alt="HOME">
             </a>
             <!------------------------------------- Menu -->
             <ul class = "navList">
