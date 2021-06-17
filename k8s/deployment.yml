@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: myvizion-web
-        image: registry.digitalocean.com/hlads/myvizion_web:5bb7e06 
+        image: registry.digitalocean.com/hlads/myvizion_web:626ea17 
         env:
         - name: database.default.hostname
           value: myvizion-vtgate
