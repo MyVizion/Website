@@ -6,7 +6,6 @@ apiVersion: planetscale.com/v2
 kind: VitessCluster
 metadata:
   name: myvizion-clu-01
-  namespace: myvizion-web-ns
 spec:
   images:
     vtctld: vitess/lite:latest
