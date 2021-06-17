@@ -32,7 +32,7 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'myvizion-vtgate',
+		'hostname' => 'myvizion-clu-01-vtgate',
 		'username' => 'user',
 		'password' => '',
 		'database' => 'myvizion',

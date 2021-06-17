@@ -25,7 +25,7 @@ spec:
         image: registry.digitalocean.com/hlads/myvizion_web:626ea17 
         env:
         - name: database.default.hostname
-          value: myvizion-vtgate
+          value: myvizion-clu-01-vtgate
         - name: database.default.database
           value: myvizion
         - name: database.default.username
