@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: myvizion-clu-01-users
+  namespace: myvizion-web-ns
 type: Opaque
 stringData:
   users.json: |
