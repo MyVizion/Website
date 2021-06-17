@@ -29,9 +29,9 @@ spec:
         - name: database.default.database
           value: myvizion
         - name: database.default.username
-          value: myvizion
+          value: user
         - name: database.default.password
-          value: Y1WKqTOzL43p
+          value: ""
         imagePullPolicy: Always
         resources:
           requests:
