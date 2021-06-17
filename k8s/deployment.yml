@@ -23,13 +23,6 @@ spec:
       containers:
       - name: myvizion-web
         image: registry.digitalocean.com/hlads/myvizion_web:8c43116
-        env:
-        - name: database.default.hostname
-          value: myvizion-clu-01-vtgate
-        - name: database.default.database
-          value: myvizion
-        - name: database.default.username
-          value: user
         imagePullPolicy: Always
         resources:
           requests:
