@@ -58,7 +58,7 @@ spec:
           tabletPools:
           - cell: ams3
             type: replica
-            replicas: 4
+            replicas: 2
             vttablet:
               extraFlags:
                 db_charset: utf8mb4
