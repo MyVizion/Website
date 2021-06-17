@@ -30,8 +30,6 @@ spec:
           value: myvizion
         - name: database.default.username
           value: user
-        - name: database.default.password
-          value: ""
         imagePullPolicy: Always
         resources:
           requests:
