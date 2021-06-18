@@ -7,7 +7,7 @@
     <div class="login">
         <form action="/register" method="post" enctype="multipart/form-data">
                 <div class="logo-head">
-                    <img src="images/logos/logo 1.1 Dark Red.png" class="biglogo">
+                    <img src="https://ams3-myvizion-cdn-01.ams3.cdn.digitaloceanspaces.com/srcimages/logos/logo%201.1%20Dark%20Red.png" class="biglogo">
                 </div>
                 <?php if (isset($validation)): ?>
                     <div class="warning">

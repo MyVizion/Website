@@ -13,7 +13,7 @@ body{
 .wrapperContainer{
     width: 100%;
     height: 450px;
-    background-image: url("/images/image(cropped).png");
+    background-image: url("https://ams3-myvizion-cdn-01.ams3.cdn.digitaloceanspaces.com/srcimages/image%28cropped%29.png");
     image-rendering: auto;
     background-repeat: no-repeat;
     background-size: cover;
