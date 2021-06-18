@@ -164,6 +164,6 @@ class ProjectsController extends BaseController
             $session->setFlashdata('success', 'Deleted Successfully!');
         }
             //redirect to root (homepage)
-            return redirect()->to('myvizion.net/');
+            return redirect()->to('/');
     }
 }
