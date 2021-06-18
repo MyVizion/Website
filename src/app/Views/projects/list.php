@@ -11,7 +11,7 @@
                 <!--------------------------------------------------------- Bottom Border -->
                 <div class="bottom-border">
                     <!------------------------------------------------------ Creator Name -->
-                    <p class="project-creator"><i class="far fa-user-circle"></i>&nbsp;<?=esc($project_item['creator'])?></p>
+                    <!--<p class="project-creator"><i class="far fa-user-circle"></i>&nbsp;<?=esc($project_item['creator'])?></p>-->
                     <!-------------------------------------------------------- Statistics -->
                     <div class="statistics">
                             <!------------------------------------------- Likes and Views -->
