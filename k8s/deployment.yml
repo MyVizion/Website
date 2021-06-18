@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myvizion-web
+  namespace: myvizion-web-ns
+  labels:
+    app: myvizion-web
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 30%
+      maxUnavailable: 0
+    type: RollingUpdate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myvizion-web
+  template:
+    metadata:
+      labels:
+        app: myvizion-web
+    spec:
+      containers:
+      - name: myvizion-web
+        image: registry.digitalocean.com/hlads/myvizion_web:bab401c
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "10m"
+          limits:
+            memory: "350Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 80

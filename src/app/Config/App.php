@@ -23,7 +23,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://myvizion/';
+	public $baseURL = 'https://myvizion.net/';
 
 	/**
 	 * --------------------------------------------------------------------------

@@ -32,9 +32,9 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => '167.99.208.30',
-		'username' => 'myvizion',
-		'password' => 'tv4bT3Wt',
+		'hostname' => 'myvizion-clu-01-vtgate',
+		'username' => 'user',
+		'password' => '',
 		'database' => 'myvizion',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',

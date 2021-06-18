@@ -6,32 +6,16 @@ env:
 
 on:
   push:
+    paths-ignore: # Don't trigger on files that are updated by the CI
+      - 'k8s/**'
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
 jobs:
-  # Run tests.
-  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Run tests
-        run: |
-          if [ -f docker-compose.test.yml ]; then
-            docker-compose --file docker-compose.test.yml build
-            docker-compose --file docker-compose.test.yml run sut
-          else
-            docker build . --file Dockerfile
-          fi
-
   build_and_push:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
-    needs: test
 
     steps:
       - name: Checkout master
