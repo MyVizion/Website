@@ -26,18 +26,20 @@
             
             <!-- Header if someone is not logged in -->
             <?php else: ?>
-            <!------------------------------------- Logo -->
-            <a href="/" class="logo">
-                <img class ="logo-img" src="https://ams3-myvizion-cdn-01.ams3.cdn.digitaloceanspaces.com/srcimages/logos/logoNobackgroundRed.png" alt="HOME">
-            </a>
-            <!------------------------------------- Menu -->
-            <ul class = "navList">
-                <li class = "navContent"><a href="/" class="active">Projects</a></li>
-                <li class = "navContent"><a href="#">Feed</a></li>
-                <li class = "navContent"><a href="#">Dashboard</a></li>
-                <li class = "navContent"><a href="<?= route_to('create_page') ?>">Create Projects</a></li>
-                <li class = "navContent"><a href="#">Survey</a></li>
-            </ul>
+            <div class="nav-parent">
+                <!------------------------------------- Logo -->
+                <a href="/" class="logo">
+                    <img class ="logo-img" src="https://ams3-myvizion-cdn-01.ams3.cdn.digitaloceanspaces.com/srcimages/logos/logoNobackgroundRed.png" alt="HOME">
+                </a>
+                <!------------------------------------- Menu -->
+                <ul class = "navList">
+                    <li class = "navContent"><a href="/" class="active">Projects</a></li>
+                    <li class = "navContent"><a href="#">Feed</a></li>
+                    <li class = "navContent"><a href="#">Dashboard</a></li>
+                    <li class = "navContent"><a href="<?= route_to('create_page') ?>">Create Projects</a></li>
+                    <li class = "navContent"><a href="#">Survey</a></li>
+                </ul>
+            </div>
             <!-- Hamburger Menu -->
             <div class="toggle nav-menu"></div>
 
