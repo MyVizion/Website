@@ -9,7 +9,7 @@ spec:
     kind: Deployment
     name: myvizion-web
   minReplicas: 1
-  maxReplicas: 16
+  maxReplicas: 4
   metrics:
   - type: Resource
     resource:
