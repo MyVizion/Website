@@ -4,8 +4,7 @@
         <!------------------------------------------------------------------- Project Box -->
         <a class="project-box" href="projects/<?= esc($project_item['id'], 'url') ?>">
         <!------------------------------------------------------------------------- Image -->
-            <?php echo '<img class="project-image" src="data:image/jpeg;base64,'
-                 .base64_encode($project_item['image']).'" alt="image" ">'?>
+            <?php echo '<img class="project-image" src="data:image" alt="image" ">'?>
                 <!----------------------------------------------------------------- Title -->
                 <p class="project-name"><?=esc($project_item['title'])?></p>
                 <!--------------------------------------------------------- Bottom Border -->
