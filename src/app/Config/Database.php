@@ -34,7 +34,7 @@ class Database extends Config
 		'DSN'      => '',
 		'hostname' => 'myvizion-clu-01-vtgate',
 		'username' => 'user',
-		'password' => '',
+		'password' => 'd8jpYr8HH7Jm',
 		'database' => 'myvizion',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
