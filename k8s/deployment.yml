@@ -21,15 +21,15 @@ spec:
         app: myvizion-web
     spec:
       containers:
-      - name: myvizion-web
-        image: registry.digitalocean.com/hlads/myvizion_web:1885617
-        imagePullPolicy: Always
-        resources:
-          requests:
-            memory: "200Mi"
-            cpu: "500m"
-          limits:
-            memory: "500Mi"
-            cpu: "1000m"
-        ports:
-        - containerPort: 80
+        - name: myvizion-web
+          image: registry.digitalocean.com/hlads/myvizion_web:12090bb
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "200Mi"
+              cpu: "500m"
+            limits:
+              memory: "500Mi"
+              cpu: "1000m"
+          ports:
+            - containerPort: 80
