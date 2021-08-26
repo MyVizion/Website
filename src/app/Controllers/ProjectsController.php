@@ -74,9 +74,28 @@ class ProjectsController extends BaseController
                 'image' => 'uploaded[image]',
             ]))
         {
-            // store image BLOB data
-            $tempfile = $file->getTempName();
-            $imgdata = file_get_contents($tempfile);
+
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+            CURLOPT_URL => 'api.myvizion.net/upload',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => array('image'=> new CURLFILE($file),'contentType' => 'projects'),
+            ));
+
+            $response = curl_exec($curl);
+
+            curl_close($curl);
+
+            $imglocation = json_decode($response, true);
+
+            $imglink = $imglink['response']['data'][1];
 
             // if so, save data 
             $model->save([
@@ -87,7 +106,7 @@ class ProjectsController extends BaseController
                 'category' => $this->request->getPost('category'),
                 'needs' => $this->request->getPost('needs'),
                 'info'  => $this->request->getPost('info'),
-                'image' => $imgdata,
+                'image' => $imglink,
             ]);
 
             // if saved succesfully, set flashdata and redirect to root (homepage)

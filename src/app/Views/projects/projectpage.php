@@ -20,9 +20,16 @@
           <!----------------------------------------- Display Page -->
 
           <!-------------------------------------- project heading -->
+     <?php if ($projects==1): ?>
           <div class="heading">
                <p>Open Project</p>
           </div>
+     <?php else: ?>
+          <div class="heading">
+          <p>Closed Project</p>
+          </div>
+
+     <?php endif; ?>
           <!------------------------------------------------ Title -->
           <div class="p-title">
                <p><?=esc($projects['title'])?></p>
@@ -38,8 +45,7 @@
                </div>
                <!----------------------------------- Project Image -->
                <div class="info-container">
-                         <?php echo '<img class="p-image" src="data:image/jpeg;base64,'.
-                               base64_encode($projects['image']).'" alt="image" ">'?> 
+                         <img class="project-image" src="<?= esc($project_item['image']) ?>" alt="image" ">
                          <article class="p-info"><?=esc($projects['info'])?></article>
                </div>
           </div>
