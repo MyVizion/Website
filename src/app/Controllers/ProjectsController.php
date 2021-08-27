@@ -86,7 +86,7 @@ class ProjectsController extends BaseController
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => array('image'=> new CURLFILE($file),'contentType' => 'projects'),
+            CURLOPT_POSTFIELDS => array('image'=> $file,'contentType' => 'projects'),
             ));
 
             $response = curl_exec($curl);
