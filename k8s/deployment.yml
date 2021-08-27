@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: myvizion-web
-          image: registry.digitalocean.com/hlads/myvizion_web:a1b6ca2
+          image: registry.digitalocean.com/hlads/myvizion_web:0774a1d
           imagePullPolicy: Always
           resources:
             requests:
