@@ -97,8 +97,6 @@ class ProjectsController extends BaseController
 
             $imglink = $imglocation['response']['data'][1];
 
-            echo $imglink
-
             // if so, save data 
             $model->save([
                 'title' => $this->request->getPost('title'),
@@ -108,7 +106,7 @@ class ProjectsController extends BaseController
                 'category' => $this->request->getPost('category'),
                 'needs' => $this->request->getPost('needs'),
                 'info'  => $this->request->getPost('info'),
-                'image' => $imglink;
+                'image' => $imglink,
             ]);
 
             // if saved succesfully, set flashdata and redirect to root (homepage)
