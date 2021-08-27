@@ -95,7 +95,9 @@ class ProjectsController extends BaseController
 
             $imglocation = json_decode($response, true);
 
-            $imglink = $imglink['response']['data'][1];
+            $imglink = $imglocation['response']['data'][1];
+
+            echo $imglink
 
             // if so, save data 
             $model->save([
