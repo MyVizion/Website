@@ -108,7 +108,7 @@ class ProjectsController extends BaseController
                 'category' => $this->request->getPost('category'),
                 'needs' => $this->request->getPost('needs'),
                 'info'  => $this->request->getPost('info'),
-                'image' => $imglink,
+                'image' => $imglink;
             ]);
 
             // if saved succesfully, set flashdata and redirect to root (homepage)
